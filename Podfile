@@ -8,11 +8,12 @@ target 'nBack' do
   # Pods for nBack
   pod 'RxCocoa'
   pod 'RxSwift'
-  pod 'IBAnimatable'
-  pod 'SwiftDate', '~> 5.0'
+  pod 'IBAnimatable', '~> 5.0'
   pod 'RAMAnimatedTabBarController'
   pod 'Material'
   pod 'CDAlertView'
   pod 'LTMorphingLabel'
-  pod 'Gecco'
+  pod 'RealmSwift'
+  pod 'paper-onboarding'
+  pod 'SVGKit'
 end

@@ -14,7 +14,6 @@ class RootViewController: UIViewController {
     @IBOutlet var polyWebView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         polyWebView.navigationDelegate = self
         
         let path: String = Bundle.main.path(forResource: "poly", ofType: "html")!
@@ -33,7 +32,7 @@ class RootViewController: UIViewController {
 extension RootViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         
-        let execJS: String = "init(4);"
+        let execJS: String = "init(4, 100, 0x668db6);"
         webView.evaluateJavaScript(execJS, completionHandler: { (object, error) -> Void in
             // jsの関数実行結果
             // js側で戻り値を返すこともできる

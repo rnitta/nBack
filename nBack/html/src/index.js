@@ -1,13 +1,13 @@
-function init(detail) {
+function init(detail, radius, color) {
   const scene = new THREE.Scene();
     const geometry = function(n) {
         if (n % 2 == 0) {
-            return new THREE.OctahedronBufferGeometry(200, (n)/2);
+            return new THREE.OctahedronBufferGeometry(radius, (n)/2);
         } else {
-            return new THREE.IcosahedronGeometry(200, (n-1)/2);
+            return new THREE.IcosahedronGeometry(radius, (n-1)/2);
         }
     }(detail);
-  const material = new THREE.MeshBasicMaterial({color: 0xff0000, wireframe: true});
+  const material = new THREE.MeshBasicMaterial({color: color, wireframe: true});
   const cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
   const camera = new THREE.PerspectiveCamera(45, 1.0);
@@ -22,6 +22,7 @@ function init(detail) {
     const height = window.innerHeight;
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(width, height);
+    renderer.setClearColor(0x555555);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   }

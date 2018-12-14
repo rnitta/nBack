@@ -1,6 +1,5 @@
 PODS:
   - CDAlertView (0.9.1)
-  - Gecco (1.0.0)
   - IBAnimatable (5.2.1)
   - LTMorphingLabel (0.5.9)
   - Material (2.16.4):
@@ -10,52 +9,59 @@ PODS:
   - Motion (1.4.3):
     - Motion/Core (= 1.4.3)
   - Motion/Core (1.4.3)
+  - paper-onboarding (5.0.0)
   - RAMAnimatedTabBarController (4.0.1)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
-  - SwiftDate (5.0.13)
 
 DEPENDENCIES:
   - CDAlertView
-  - Gecco
-  - IBAnimatable
+  - IBAnimatable (~> 5.0)
   - LTMorphingLabel
   - Material
+  - paper-onboarding
   - RAMAnimatedTabBarController
+  - RealmSwift
   - RxCocoa
   - RxSwift
-  - SwiftDate (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CDAlertView
-    - Gecco
     - IBAnimatable
     - LTMorphingLabel
     - Material
     - Motion
+    - paper-onboarding
     - RAMAnimatedTabBarController
+    - Realm
+    - RealmSwift
     - RxAtomic
     - RxCocoa
     - RxSwift
-    - SwiftDate
 
 SPEC CHECKSUMS:
   CDAlertView: 89450acbd8d882868f2fc4ec6d2b6f128710c779
-  Gecco: e662f949821e742997787bad7b730ccc0052e43c
   IBAnimatable: a46b835ec6875178516cf7e014a40194d6bfa3fc
   LTMorphingLabel: e6047354486aa4ba52d36ccc40be8874b50e1ef1
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
+  paper-onboarding: a2e3a710fd27ac0b5635ec5490660e7ec09289b5
   RAMAnimatedTabBarController: 677d6f7ec7e88b1089486f4db49b0a5067e8ad1c
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
-  SwiftDate: f4aea5fa9dee812485f34041121a4cbde01b0dee
 
-PODFILE CHECKSUM: 6644f13ca6df35145d1c616ff9149cce7a9eaa67
+PODFILE CHECKSUM: c00a7d102674277b267464fc7da463da30280de2
 
 COCOAPODS: 1.5.3
