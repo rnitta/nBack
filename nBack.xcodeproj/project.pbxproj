@@ -12,9 +12,16 @@
 		87BC505321C3230D000B3134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505121C3230D000B3134 /* Main.storyboard */; };
 		87BC505521C3230E000B3134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505421C3230E000B3134 /* Assets.xcassets */; };
 		87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505621C3230E000B3134 /* LaunchScreen.storyboard */; };
+		87BC506621C323B0000B3134 /* three.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506121C323AF000B3134 /* three.min.js */; };
+		87BC506721C323B0000B3134 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506321C323AF000B3134 /* index.js */; };
+		87BC506921C323B0000B3134 /* poly.html in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506521C323B0000B3134 /* poly.html */; };
+		87BC506B21C32467000B3134 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC506A21C32467000B3134 /* RootViewController.swift */; };
+		9E03F3860DDAA1DE29B54BE7 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62654F7A64B3DFD1D002597C /* Pods_nBack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16158A49AE9C4DC5D7C342AA /* Pods-nBack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.release.xcconfig"; sourceTree = "<group>"; };
+		62654F7A64B3DFD1D002597C /* Pods_nBack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BC504A21C3230D000B3134 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BC504D21C3230D000B3134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BC504F21C3230D000B3134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,11 @@
 		87BC505421C3230E000B3134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87BC505721C3230E000B3134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87BC505921C3230E000B3134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BC506121C323AF000B3134 /* three.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = three.min.js; sourceTree = "<group>"; };
+		87BC506321C323AF000B3134 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		87BC506521C323B0000B3134 /* poly.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = poly.html; sourceTree = "<group>"; };
+		87BC506A21C32467000B3134 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		BDD29C01F4BFB139215DAD2F /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E03F3860DDAA1DE29B54BE7 /* Pods_nBack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		551FEE707D2C57C7CA0C8D82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDD29C01F4BFB139215DAD2F /* Pods-nBack.debug.xcconfig */,
+				16158A49AE9C4DC5D7C342AA /* Pods-nBack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		87BC504121C3230D000B3134 = {
 			isa = PBXGroup;
 			children = (
 				87BC504C21C3230D000B3134 /* nBack */,
 				87BC504B21C3230D000B3134 /* Products */,
+				551FEE707D2C57C7CA0C8D82 /* Pods */,
+				E790389440E533A242AA951C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,7 +78,9 @@
 		87BC504C21C3230D000B3134 /* nBack */ = {
 			isa = PBXGroup;
 			children = (
+				87BC505F21C3237E000B3134 /* html */,
 				87BC504D21C3230D000B3134 /* AppDelegate.swift */,
+				87BC506A21C32467000B3134 /* RootViewController.swift */,
 				87BC504F21C3230D000B3134 /* ViewController.swift */,
 				87BC505121C3230D000B3134 /* Main.storyboard */,
 				87BC505421C3230E000B3134 /* Assets.xcassets */,
@@ -64,6 +90,40 @@
 			path = nBack;
 			sourceTree = "<group>";
 		};
+		87BC505F21C3237E000B3134 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				87BC506021C323AF000B3134 /* lib */,
+				87BC506521C323B0000B3134 /* poly.html */,
+				87BC506221C323AF000B3134 /* src */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		87BC506021C323AF000B3134 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				87BC506121C323AF000B3134 /* three.min.js */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		87BC506221C323AF000B3134 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				87BC506321C323AF000B3134 /* index.js */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		E790389440E533A242AA951C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62654F7A64B3DFD1D002597C /* Pods_nBack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87BC505C21C3230E000B3134 /* Build configuration list for PBXNativeTarget "nBack" */;
 			buildPhases = (
+				6A121434F93F148ACA2F2F2F /* [CP] Check Pods Manifest.lock */,
 				87BC504621C3230D000B3134 /* Sources */,
 				87BC504721C3230D000B3134 /* Frameworks */,
 				87BC504821C3230D000B3134 /* Resources */,
+				5AC157A2180DE81360A11C93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,13 +184,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BC506721C323B0000B3134 /* index.js in Resources */,
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
+				87BC506921C323B0000B3134 /* poly.html in Resources */,
+				87BC506621C323B0000B3134 /* three.min.js in Resources */,
 				87BC505521C3230E000B3134 /* Assets.xcassets in Resources */,
 				87BC505321C3230D000B3134 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AC157A2180DE81360A11C93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Gecco/Gecco.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/RAMAnimatedTabBarController/RAMAnimatedTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gecco.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMAnimatedTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A121434F93F148ACA2F2F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nBack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87BC504621C3230D000B3134 /* Sources */ = {
@@ -137,6 +269,7 @@
 			files = (
 				87BC505021C3230D000B3134 /* ViewController.swift in Sources */,
 				87BC504E21C3230D000B3134 /* AppDelegate.swift in Sources */,
+				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,11 +413,13 @@
 		};
 		87BC505D21C3230E000B3134 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD29C01F4BFB139215DAD2F /* Pods-nBack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68DJPNEHBE;
 				INFOPLIST_FILE = nBack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +427,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.amagrammer.nBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		87BC505E21C3230E000B3134 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16158A49AE9C4DC5D7C342AA /* Pods-nBack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68DJPNEHBE;
 				INFOPLIST_FILE = nBack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.amagrammer.nBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
