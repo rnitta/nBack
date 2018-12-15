@@ -6,14 +6,11 @@ target 'nBack' do
   use_frameworks!
 
   # Pods for nBack
-  pod 'RxCocoa'
-  pod 'RxSwift'
   pod 'IBAnimatable', '~> 5.0'
-  pod 'RAMAnimatedTabBarController'
   pod 'Material'
   pod 'CDAlertView'
-  pod 'LTMorphingLabel'
   pod 'RealmSwift'
   pod 'paper-onboarding'
   pod 'SVGKit'
+  pod 'fluid-slider'
 end
