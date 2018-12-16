@@ -11,6 +11,8 @@
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
 		87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD9221C49B1900956562 /* grid_icon.svg */; };
 		87B4FD9621C4F8D300956562 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9521C4F8D300956562 /* UIButton.swift */; };
+		87B4FD9C21C526BE00956562 /* CalcGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9B21C526BE00956562 /* CalcGameViewController.swift */; };
+		87B4FD9E21C526D400956562 /* GridGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9D21C526D400956562 /* GridGameViewController.swift */; };
 		87BC504E21C3230D000B3134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC504D21C3230D000B3134 /* AppDelegate.swift */; };
 		87BC505321C3230D000B3134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505121C3230D000B3134 /* Main.storyboard */; };
 		87BC505521C3230E000B3134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505421C3230E000B3134 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		87B4FD9221C49B1900956562 /* grid_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid_icon.svg; sourceTree = "<group>"; };
 		87B4FD9521C4F8D300956562 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		87B4FD9B21C526BE00956562 /* CalcGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcGameViewController.swift; sourceTree = "<group>"; };
+		87B4FD9D21C526D400956562 /* GridGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridGameViewController.swift; sourceTree = "<group>"; };
 		87BC504A21C3230D000B3134 /* nBack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nBack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BC504D21C3230D000B3134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BC505221C3230D000B3134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		87B4FD9A21C5268C00956562 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				87B4FD9B21C526BE00956562 /* CalcGameViewController.swift */,
+				87B4FD9D21C526D400956562 /* GridGameViewController.swift */,
 			);
 			path = game;
 			sourceTree = "<group>";
@@ -265,11 +271,14 @@
 				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/NumPad/NumPad.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
@@ -281,11 +290,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NumPad.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -325,10 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87BC504E21C3230D000B3134 /* AppDelegate.swift in Sources */,
+				87B4FD9C21C526BE00956562 /* CalcGameViewController.swift in Sources */,
 				87B4FD9121C40D9100956562 /* UIImage.swift in Sources */,
 				87BC50A221C3E225000B3134 /* UIColor.swift in Sources */,
 				87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */,
 				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,
+				87B4FD9E21C526D400956562 /* GridGameViewController.swift in Sources */,
 				87B4FD9621C4F8D300956562 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -105,7 +105,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="2yG-jg-nG2" kind="custom" customClass="PresentNatGeoSegue" customModule="IBAnimatable" id="j3D-S9-nzj"/>
+                                    <segue destination="2yG-jg-nG2" kind="custom" identifier="calcGameSegue" customClass="PresentCardsSegue" customModule="IBAnimatable" id="j3D-S9-nzj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: 1, 3, 5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-Ez-TJu">
@@ -149,7 +149,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="7Um-NN-UOQ" kind="custom" customClass="PresentPortalSegue" customModule="IBAnimatable" id="fAg-pl-xIA"/>
+                                    <segue destination="7Um-NN-UOQ" kind="custom" identifier="gridGameSegue" customClass="PresentCardsSegue" customModule="IBAnimatable" id="fAg-pl-xIA"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoH-hj-FtF" customClass="Slider" customModule="fluid_slider">
@@ -207,28 +207,141 @@
             </objects>
             <point key="canvasLocation" x="868" y="129.98500749625188"/>
         </scene>
-        <!--View Controller-->
+        <!--Calc Game View Controller-->
         <scene sceneID="DUV-DO-6Ii">
             <objects>
-                <viewController id="2yG-jg-nG2" sceneMemberID="viewController">
+                <viewController id="2yG-jg-nG2" customClass="CalcGameViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FmP-OJ-1jC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-0M-TSa" customClass="NumPad" customModule="NumPad">
+                                <rect key="frame" x="0.0" y="386" width="375" height="281"/>
+                                <color key="backgroundColor" red="0.93695038559999999" green="0.93007671830000005" blue="0.88234686849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cPR-0M-TSa" secondAttribute="height" multiplier="4:3" id="fsm-w3-1l5"/>
+                                </constraints>
+                            </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-77-CWM">
+                                <rect key="frame" x="0.0" y="376" width="375" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="5F3-cR-tRz"/>
+                                </constraints>
+                                <color key="progressTintColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                <color key="trackTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hZ-Q2-Xmx">
+                                <rect key="frame" x="30" y="30" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZCv-vF-VZV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isDividerHidden" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N + N = ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFH-5f-AN0" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="83" y="90" width="209" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="nks-I7-vxX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="42"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miss: N" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZQ-d2-Gbs">
+                                <rect key="frame" x="260" y="350" width="100" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XMg-RL-7DN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="734-gs-4Ae">
+                                <rect key="frame" x="313" y="37" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dis:" destination="2yG-jg-nG2" eventType="touchUpInside" id="ZWR-Hk-ZHy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8hZ-Q2-Xmx" firstAttribute="centerX" secondItem="FmP-OJ-1jC" secondAttribute="centerX" id="6YN-iK-uUX"/>
+                            <constraint firstItem="IFH-5f-AN0" firstAttribute="top" secondItem="8hZ-Q2-Xmx" secondAttribute="bottom" constant="30" id="89f-vu-fRZ"/>
+                            <constraint firstItem="ReW-77-CWM" firstAttribute="leading" secondItem="FmP-OJ-1jC" secondAttribute="leading" id="D19-8r-3KV"/>
+                            <constraint firstItem="bwj-J1-lgZ" firstAttribute="trailing" secondItem="xZQ-d2-Gbs" secondAttribute="trailing" constant="15" id="Dc2-7C-JrZ"/>
+                            <constraint firstItem="IFH-5f-AN0" firstAttribute="centerX" secondItem="FmP-OJ-1jC" secondAttribute="centerX" id="FMy-8e-apj"/>
+                            <constraint firstItem="ReW-77-CWM" firstAttribute="top" secondItem="xZQ-d2-Gbs" secondAttribute="bottom" constant="10" id="PFw-0T-Y0c"/>
+                            <constraint firstItem="bwj-J1-lgZ" firstAttribute="bottom" secondItem="cPR-0M-TSa" secondAttribute="bottom" id="QMM-sG-3mH"/>
+                            <constraint firstAttribute="trailing" secondItem="ReW-77-CWM" secondAttribute="trailing" id="SEt-kC-fc7"/>
+                            <constraint firstItem="cPR-0M-TSa" firstAttribute="leading" secondItem="bwj-J1-lgZ" secondAttribute="leading" id="UjT-hV-GYo"/>
+                            <constraint firstItem="cPR-0M-TSa" firstAttribute="top" secondItem="ReW-77-CWM" secondAttribute="bottom" id="Xo2-7c-fBO"/>
+                            <constraint firstItem="8hZ-Q2-Xmx" firstAttribute="leading" secondItem="bwj-J1-lgZ" secondAttribute="leading" constant="30" id="a9F-zM-OKJ"/>
+                            <constraint firstItem="bwj-J1-lgZ" firstAttribute="trailing" secondItem="8hZ-Q2-Xmx" secondAttribute="trailing" constant="30" id="cVB-cK-DHs"/>
+                            <constraint firstItem="8hZ-Q2-Xmx" firstAttribute="top" secondItem="bwj-J1-lgZ" secondAttribute="top" constant="10" id="nGi-TB-JA8"/>
+                            <constraint firstItem="bwj-J1-lgZ" firstAttribute="trailing" secondItem="cPR-0M-TSa" secondAttribute="trailing" id="wJG-kr-Twj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bwj-J1-lgZ"/>
                     </view>
+                    <connections>
+                        <outlet property="countDownLabel" destination="qTc-bo-ps7" id="eeO-lY-uGn"/>
+                        <outlet property="countDownView" destination="gql-eZ-wIo" id="VnL-hp-W1e"/>
+                        <outlet property="levelLabel" destination="8hZ-Q2-Xmx" id="Lb9-IV-gnN"/>
+                        <outlet property="numPad" destination="cPR-0M-TSa" id="XXd-jK-WPN"/>
+                        <outlet property="progressBar" destination="ReW-77-CWM" id="DPI-zh-7b1"/>
+                        <outlet property="subjectLabel" destination="IFH-5f-AN0" id="5If-GF-rt1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYB-R7-0vg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="gql-eZ-wIo">
+                    <rect key="frame" x="0.0" y="0.0" width="362" height="432"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-bo-ps7" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                            <rect key="frame" x="145.5" y="166" width="71.5" height="100"/>
+                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="100"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="qTc-bo-ps7" firstAttribute="centerY" secondItem="gql-eZ-wIo" secondAttribute="centerY" id="qKQ-cm-cJR"/>
+                        <constraint firstItem="qTc-bo-ps7" firstAttribute="centerX" secondItem="gql-eZ-wIo" secondAttribute="centerX" id="syo-gF-qHZ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="any-fr-5mF"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="513" y="903"/>
+            <point key="canvasLocation" x="472.80000000000001" y="1270.6146926536733"/>
         </scene>
-        <!--View Controller-->
+        <!--Grid Game View Controller-->
         <scene sceneID="Ue9-pd-h9N">
             <objects>
-                <viewController id="7Um-NN-UOQ" sceneMemberID="viewController">
+                <viewController id="7Um-NN-UOQ" customClass="GridGameViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qT-K2-tco">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3j5-UI-MqP">
+                                <rect key="frame" x="154" y="95" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dis:" destination="7Um-NN-UOQ" eventType="touchUpInside" id="NIF-mn-pnT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wGc-lT-LdA"/>
                     </view>

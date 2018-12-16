@@ -13,4 +13,8 @@ target 'nBack' do
   pod 'paper-onboarding'
   pod 'SVGKit'
   pod 'fluid-slider'
+  pod 'LTMorphingLabel'
+  pod 'NumPad'
 end
+
+

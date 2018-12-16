@@ -18,4 +18,8 @@ extension UIColor {
     struct Set {
         static var lightBase: UIColor { return #colorLiteral(red: 0.937254902, green: 0.9294117647, blue: 0.8784313725, alpha: 1) }
     }
+    
+    struct Border {
+        static var ultraLightGray: UIColor { return #colorLiteral(red: 0.9827563167, green: 0.9759425521, blue: 0.9289438128, alpha: 1) }
+    }
 }

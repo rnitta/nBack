@@ -18,6 +18,7 @@ class RootViewController: UIViewController {
     @IBOutlet var gridGameButton: UIButton!
     @IBOutlet var nSlider: Slider!
     @IBOutlet var levellabel: UILabel!
+    var levelN: Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,16 @@ class RootViewController: UIViewController {
         setupGameButtons()
         setupSlider()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "calcGameSegue" {
+            let calcGameViewController: CalcGameViewController = segue.destination as! CalcGameViewController
+            calcGameViewController.levelN = self.levelN
+        } else if segue.identifier == "gridGameSegue" {
+
+        }
+    }
+    
     private func setupSlider() {
         let maxNum = 9
         let minNum = 1
@@ -45,7 +56,7 @@ class RootViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 1
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (Double(fraction) * Double(maxNum - minNum) + Double(minNum)) as NSNumber) ?? ""
+            let string = formatter.string(from: (Float(fraction) * Float(maxNum - minNum) + Float(minNum)) as NSNumber) ?? ""
             return NSAttributedString(string: string, attributes: [.font: UIFont(name: "HiraginoSans-W6", size: 14)!, .foregroundColor: UIColor.Set.lightBase])
         }
         nSlider.isOpaque = false
@@ -54,14 +65,16 @@ class RootViewController: UIViewController {
         nSlider.setMaximumLabelAttributedText(NSAttributedString(string: "Hard", attributes: labelTextAttributes))
         nSlider.shadowOffset = CGSize(width: 0, height: 10)
         nSlider.shadowBlur = 5
-        nSlider.fraction = CGFloat(Double(initNum - minNum) / Double(maxNum))
+        nSlider.fraction = CGFloat(Float(initNum - minNum) / Float(maxNum))
         nSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         nSlider.contentViewColor = UIColor.Set.lightBase
         nSlider.valueViewColor = UIColor.darkGray
         nSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
         }
-        nSlider.didEndTracking = { [weak self] _ in
+        nSlider.didEndTracking = { [weak self] slider in
+            let selectedN = Float(slider.fraction) * Float(maxNum - minNum) + Float(minNum) as NSNumber
+            self?.levelN = Int(truncating: selectedN)
             self?.setLabelHidden(false, animated: true)
         }
         
@@ -72,7 +85,7 @@ class RootViewController: UIViewController {
             self.levellabel.alpha = hidden ? 0 : 1
         }
         if animated {
-            UIView.animate(withDuration: 0.11, animations: animations)
+            UIView.animate(withDuration: 0.2, animations: animations)
         } else {
             animations()
         }
