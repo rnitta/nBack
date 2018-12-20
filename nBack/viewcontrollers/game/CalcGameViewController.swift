@@ -9,6 +9,15 @@
 import UIKit
 import NumPad
 import LTMorphingLabel
+import IBAnimatable
+
+enum GameStatus {
+    case pending
+    case memorize
+    case answer
+    case trail
+    case end
+}
 
 class CalcGameViewController: UIViewController {
     var levelN: Int?
@@ -51,8 +60,11 @@ class CalcGameViewController: UIViewController {
     private func createSubjects() {
         guard let initN = levelN else { return }
         var prevNums: [Int] = [0, 0]
+        
+        // 問題の配列生成
         for _ in 1...(10 + initN) {
             var nums = [Int.random(in: 1...9), Int.random(in: 1...9)]
+            // 同じ数字が出力されると答えた感が無いので同じ数字を避けるためのロジック
             if prevNums[0] == nums[0] && prevNums[1] == nums[1] {
                 nums = [10 - prevNums[0], 10 - prevNums[1]]
                 if nums[0] == 5 && nums[1] == 5 {
@@ -81,7 +93,6 @@ extension CalcGameViewController: NumPadDelegate, NumPadDataSource {
         if let sl = numbers[position.row][position.column] {
             subjectLabel.text = "\(subjects[sl][0]) + \(subjects[sl][1]) = ?"
         }
-        print(numbers[position.row][position.column])
     }
 
     func numPad(_ numPad: NumPad, itemAtPosition position: Position) -> Item {

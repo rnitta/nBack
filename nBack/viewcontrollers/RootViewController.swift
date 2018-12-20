@@ -18,6 +18,11 @@ class RootViewController: UIViewController {
     @IBOutlet var gridGameButton: UIButton!
     @IBOutlet var nSlider: Slider!
     @IBOutlet var levellabel: UILabel!
+    @IBAction func auaua(_ sender: UIButton) {
+        let execJS: String = "init(\(Int.random(in: 0...9)), \(Int.random(in: 50...200)), 0x668db6);"
+        polyWebView.evaluateJavaScript(execJS, completionHandler: { (object, error) -> Void in
+        })
+    }
     var levelN: Int = 1
 
     override func viewDidLoad() {
@@ -41,7 +46,7 @@ class RootViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "calcGameSegue" {
             let calcGameViewController: CalcGameViewController = segue.destination as! CalcGameViewController
-            calcGameViewController.levelN = self.levelN
+            calcGameViewController.levelN = self.levelN // 7,8でずれる
         } else if segue.identifier == "gridGameSegue" {
 
         }
@@ -56,7 +61,7 @@ class RootViewController: UIViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 1
             formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (Float(fraction) * Float(maxNum - minNum) + Float(minNum)) as NSNumber) ?? ""
+            let string = "\(Int(floor(Float(fraction) * Float(maxNum - minNum) + Float(minNum))))"
             return NSAttributedString(string: string, attributes: [.font: UIFont(name: "HiraginoSans-W6", size: 14)!, .foregroundColor: UIColor.Set.lightBase])
         }
         nSlider.isOpaque = false
@@ -73,8 +78,10 @@ class RootViewController: UIViewController {
             self?.setLabelHidden(true, animated: true)
         }
         nSlider.didEndTracking = { [weak self] slider in
-            let selectedN = Float(slider.fraction) * Float(maxNum - minNum) + Float(minNum) as NSNumber
-            self?.levelN = Int(truncating: selectedN)
+            print(slider.fraction)
+            let selectedN = Int(floor(Float(slider.fraction) * Float(maxNum - minNum) + Float(minNum)))
+            print(selectedN)
+            self?.levelN = selectedN
             self?.setLabelHidden(false, animated: true)
         }
         

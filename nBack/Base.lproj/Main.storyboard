@@ -169,8 +169,16 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ix-Gs-A1T">
+                                <rect key="frame" x="177" y="416" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="auaua:" destination="aId-nK-eHv" eventType="touchUpInside" id="sUe-Ii-wie"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2627450980392157" green="0.26379683613777161" blue="0.26379683613777161" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dcy-u5-yOH" firstAttribute="bottom" secondItem="X36-Vf-AfO" secondAttribute="bottom" constant="30" id="1JL-vi-Bn5"/>
                             <constraint firstItem="v5C-Oa-t3p" firstAttribute="centerX" secondItem="o0R-Ib-6xU" secondAttribute="centerX" id="29e-Od-lYA"/>
