@@ -17,17 +17,20 @@ PODS:
   - Motion (1.4.3):
     - Motion/Core (= 1.4.3)
   - Motion/Core (1.4.3)
-  - NumPad (3.0.1)
   - paper-onboarding (5.0.0)
   - pop (1.0.12)
-  - Realm (3.12.0):
-    - Realm/Headers (= 3.12.0)
-  - Realm/Headers (3.12.0)
-  - RealmSwift (3.12.0):
-    - Realm (= 3.12.0)
+  - Realm (3.13.0):
+    - Realm/Headers (= 3.13.0)
+  - Realm/Headers (3.13.0)
+  - RealmSwift (3.13.0):
+    - Realm (= 3.13.0)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
   - SVGKit (2.1.0):
     - CocoaLumberjack (~> 3.0)
-  - YLProgressBar (3.11.0)
 
 DEPENDENCIES:
   - CDAlertView
@@ -35,11 +38,11 @@ DEPENDENCIES:
   - IBAnimatable (~> 5.0)
   - LTMorphingLabel
   - Material
-  - NumPad
   - paper-onboarding
   - RealmSwift
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - SVGKit
-  - YLProgressBar (~> 3.11.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -50,13 +53,14 @@ SPEC REPOS:
     - LTMorphingLabel
     - Material
     - Motion
-    - NumPad
     - paper-onboarding
     - pop
     - Realm
     - RealmSwift
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
     - SVGKit
-    - YLProgressBar
 
 SPEC CHECKSUMS:
   CDAlertView: 89450acbd8d882868f2fc4ec6d2b6f128710c779
@@ -66,14 +70,15 @@ SPEC CHECKSUMS:
   LTMorphingLabel: e6047354486aa4ba52d36ccc40be8874b50e1ef1
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
-  NumPad: 4bed9fe05f294bd7ba5d109f3245d96b38c998f4
   paper-onboarding: a2e3a710fd27ac0b5635ec5490660e7ec09289b5
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
-  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
-  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+  Realm: 5edd2ee65406aef591a4f9895de5a3440e51b3d8
+  RealmSwift: be5ebc7930e37cd3376b41cec7f21984528aaa16
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
-  YLProgressBar: 0c0796a6e9b5e5d5040d15c8911e802b67ccb939
 
-PODFILE CHECKSUM: 576cb0cb02cc9b3f7a8d2d91e392c7c1415202b5
+PODFILE CHECKSUM: 84e895674d3dded34bf415781cdcdee8913da74a
 
 COCOAPODS: 1.5.3

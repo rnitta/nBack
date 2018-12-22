@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import NumPad
 import LTMorphingLabel
 import IBAnimatable
 
