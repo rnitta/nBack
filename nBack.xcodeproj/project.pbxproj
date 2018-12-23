@@ -24,6 +24,9 @@
 		87BC506B21C32467000B3134 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC506A21C32467000B3134 /* RootViewController.swift */; };
 		87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */; };
 		87BC50A221C3E225000B3134 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC50A121C3E225000B3134 /* UIColor.swift */; };
+		87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7B50621CE4A3D00AA18FF /* NPad.swift */; };
+		87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B51C21CFA4D500AA18FF /* Localizable.strings */; };
+		87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B51F21CFA4E200AA18FF /* Localizable.strings */; };
 		9E03F3860DDAA1DE29B54BE7 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62654F7A64B3DFD1D002597C /* Pods_nBack.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		87BC506A21C32467000B3134 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		87BC50A121C3E225000B3134 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		87F7B50621CE4A3D00AA18FF /* NPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPad.swift; sourceTree = "<group>"; };
+		87F7B51D21CFA4D500AA18FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
+		87F7B52021CFA4E200AA18FF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Localizable.strings; sourceTree = "<group>"; };
 		BDD29C01F4BFB139215DAD2F /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +134,8 @@
 		87BC504C21C3230D000B3134 /* nBack */ = {
 			isa = PBXGroup;
 			children = (
+				87F7B50A21CFA36700AA18FF /* Base.lproj */,
+				87F7B50F21CFA36700AA18FF /* ja.lproj */,
 				87578D9221CB31E300F76F54 /* views */,
 				87B4FD8C21C40ACD00956562 /* assets */,
 				87BC50A021C3E1FD000B3134 /* utils */,
@@ -184,8 +192,25 @@
 				87BC50A121C3E225000B3134 /* UIColor.swift */,
 				87B4FD9021C40D9100956562 /* UIImage.swift */,
 				87B4FD9521C4F8D300956562 /* UIButton.swift */,
+				87F7B50621CE4A3D00AA18FF /* NPad.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		87F7B50A21CFA36700AA18FF /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				87F7B51C21CFA4D500AA18FF /* Localizable.strings */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		87F7B50F21CFA36700AA18FF /* ja.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				87F7B51F21CFA4E200AA18FF /* Localizable.strings */,
+			);
+			path = ja.lproj;
 			sourceTree = "<group>";
 		};
 		E790389440E533A242AA951C /* Frameworks */ = {
@@ -240,6 +265,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 87BC504121C3230D000B3134;
 			productRefGroup = 87BC504B21C3230D000B3134 /* Products */;
@@ -256,6 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */,
+				87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */,
 				87BC506721C323B0000B3134 /* index.js in Resources */,
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
 				87BC506921C323B0000B3134 /* poly.html in Resources */,
@@ -288,8 +316,10 @@
 				"${BUILT_PRODUCTS_DIR}/NumPad/NumPad.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
-				"${BUILT_PRODUCTS_DIR}/YLProgressBar/YLProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
@@ -307,8 +337,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NumPad.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YLProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
@@ -355,6 +387,7 @@
 				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,
 				87B4FD9E21C526D400956562 /* GridGameViewController.swift in Sources */,
 				87578D9421CB320800F76F54 /* LaunchView.swift in Sources */,
+				87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */,
 				87B4FD9621C4F8D300956562 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +411,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		87F7B51C21CFA4D500AA18FF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87F7B51D21CFA4D500AA18FF /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		87F7B51F21CFA4E200AA18FF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87F7B52021CFA4E200AA18FF /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -385,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -446,6 +496,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

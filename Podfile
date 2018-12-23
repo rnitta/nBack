@@ -14,6 +14,8 @@ target 'nBack' do
   pod 'SVGKit'
   pod 'fluid-slider'
   pod 'LTMorphingLabel'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
   pod 'NumPad'
 end
 

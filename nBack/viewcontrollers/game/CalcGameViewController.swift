@@ -17,12 +17,22 @@ enum GameStatus {
     case answer
     case trail
     case end
+    
+    func text() -> String {
+        <#function body#>
+    }
 }
 
 class CalcGameViewController: UIViewController {
     var levelN: Int?
     var subjects: [[Int]] = [] // 問題
     let numbers: [[Int?]] = [[1,2,3],[4,5,6],[7,8,9],[nil,0,nil]]
+    var turnCount: Int? {
+        didSet {
+            updateTurn()
+        }
+    }
+    var status: GameStatus = .pending
     @IBOutlet var countDownView: UIView!
     @IBOutlet var countDownLabel: LTMorphingLabel!
     @IBOutlet var numPad: NumPad!
@@ -41,6 +51,7 @@ class CalcGameViewController: UIViewController {
         self.view.addSubview(countDownView)
         setupCountDownTimer()
         createSubjects()
+        initView()
     }
     
     private func setupCountDownTimer() {
@@ -83,16 +94,45 @@ class CalcGameViewController: UIViewController {
     }
 }
 
+//MARK: - ゲーム関連
+extension CalcGameViewController {
+    private func initView() {
+        turnCount = 1
+        progressBar.setProgress(0, animated: false)
+        subjectLabel.morphingEffect = .evaporate
+        updateSubjectLabel()
+    }
+    
+    private func updateTurn() {
+        if let level = levelN, let turn = turnCount {
+            let prog: Float = Float(turn) / Float(level * 2 + 9)
+            progressBar.setProgress(prog, animated: true)
+            switch true {
+            case turn <= level:
+                status = .memorize
+            case level < turn && turn <= level + 9:
+                status = .answer
+            case level + 9 < turn && turn <= level * 2 + 9:
+                status = .trail
+            case level * 2 + 9 <= turn:
+                status = .end
+            default:
+                status = .pending
+            }
+        }
+    }
+    
+    private func updateSubjectLabel() {
+        if let turn = turnCount {
+            subjectLabel.text = "\(subjects[turn - 1][0]) + \(subjects[turn - 1][1]) = ?"
+        }
+    }
+}
+
 extension CalcGameViewController: NumPadDelegate, NumPadDataSource {
     
     func numPad(_ numPad: NumPad, itemTapped item: Item, atPosition position: Position) {
-        let prog: Float = 1.0 / Float(numbers[position.row][position.column] ?? 1)
-        progressBar.setProgress(prog, animated: true)
-        
-        subjectLabel.morphingEffect = .evaporate
-        if let sl = numbers[position.row][position.column] {
-            subjectLabel.text = "\(subjects[sl][0]) + \(subjects[sl][1]) = ?"
-        }
+        print(position)
     }
 
     func numPad(_ numPad: NumPad, itemAtPosition position: Position) -> Item {
