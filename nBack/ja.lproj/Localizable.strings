@@ -5,3 +5,7 @@
   Created by PT2051 on 2018/12/23.
   Copyright © 2018 amagrammer. All rights reserved.
 */
+
+"game_memorize" = "?の下1桁を記憶してください";
+"game_missCount" = "ミス数: %d";
+"game_answerNBack" = "%d個前の数字は？";

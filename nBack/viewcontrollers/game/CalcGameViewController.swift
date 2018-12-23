@@ -9,6 +9,7 @@
 import UIKit
 import LTMorphingLabel
 import IBAnimatable
+import NumPad
 
 enum GameStatus {
     case pending
@@ -18,32 +19,43 @@ enum GameStatus {
     case end
     
     func text() -> String {
-        <#function body#>
+        return ""
     }
 }
 
 class CalcGameViewController: UIViewController {
     var levelN: Int?
-    var subjects: [[Int]] = [] // 問題
-    let numbers: [[Int?]] = [[1,2,3],[4,5,6],[7,8,9],[nil,0,nil]]
-    var turnCount: Int? {
+    private var subjects: [[Int]] = [] // 問題
+    private let numbers: [[Int?]] = [[1,2,3],[4,5,6],[7,8,9],[nil,0,nil]]
+    private var turnCount: Int? {
         didSet {
             updateTurn()
+            updateSubjectLabel()
+        }
+    }
+    private var missCount: Int? {
+        didSet {
+            updateMissCountLabel()
         }
     }
     var status: GameStatus = .pending
     @IBOutlet var countDownView: UIView!
     @IBOutlet var countDownLabel: LTMorphingLabel!
+    @IBOutlet var countDownAnimationView: LOTAnimationView!
+    @IBOutlet var indicatorAnimationView: LOTAnimationView!
     @IBOutlet var numPad: NumPad!
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var levelLabel: UILabel!
     @IBOutlet var subjectLabel: LTMorphingLabel!
+    @IBOutlet var memorizeLabel: UILabel!
+    @IBOutlet var missCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         numPad.dataSource = self
         numPad.delegate = self
         numPad.backgroundColor = UIColor.Border.ultraLightGray
+        numPad.isHidden = true
         
         if let initN = levelN { levelLabel.text = "\(initN) Back" }
         
@@ -51,20 +63,6 @@ class CalcGameViewController: UIViewController {
         setupCountDownTimer()
         createSubjects()
         initView()
-    }
-    
-    private func setupCountDownTimer() {
-        countDownView.frame = self.view.frame
-        countDownView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        countDownLabel.morphingEffect = .pixelate
-        for i in 1...3 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
-                self.countDownLabel.text = "\(3 - i)"
-                if i == 3 {
-                    self.countDownView.removeFromSuperview()
-                }
-            }
-        }
     }
     
     private func createSubjects() {
@@ -81,7 +79,6 @@ class CalcGameViewController: UIViewController {
                     nums = [6,6]
                 }
             }
-
             prevNums = nums
             subjects += [nums]
         }
@@ -93,11 +90,39 @@ class CalcGameViewController: UIViewController {
     }
 }
 
+//MARK: - カウントダウン関連
+extension CalcGameViewController {
+    private func setupCountDownTimer() {
+        // アニメーション
+        countDownAnimationView.setAnimation(named: "materialCountDown.json")
+        countDownAnimationView.loopAnimation = false
+        countDownAnimationView.animationSpeed = 1
+        countDownAnimationView.play(fromProgress: 0, toProgress: 0.75, withCompletion: nil) // 4周あるので
+        
+        // カウントダウンラベル
+        countDownView.frame = self.view.frame
+        countDownView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        countDownLabel.morphingEffect = .pixelate
+        for i in 1...3 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
+                self.countDownLabel.text = "\(3 - i)"
+                if i == 3 {
+                    self.countDownAnimationView.pause()
+                    self.countDownView.removeFromSuperview()
+                    self.startMemorizeTurn()
+                }
+            }
+        }
+    }
+}
+
 //MARK: - ゲーム関連
 extension CalcGameViewController {
     private func initView() {
         turnCount = 1
-        progressBar.setProgress(0, animated: false)
+        missCount = 0
+        memorizeLabel.text = NSLocalizedString("game_memorize", comment: "")
+        missCountLabel.text = String(format: NSLocalizedString("game_missCount", comment: ""), 0)
         subjectLabel.morphingEffect = .evaporate
         updateSubjectLabel()
     }
@@ -122,8 +147,38 @@ extension CalcGameViewController {
     }
     
     private func updateSubjectLabel() {
-        if let turn = turnCount {
+        if let turn = turnCount, status == .memorize || status == .answer  {
             subjectLabel.text = "\(subjects[turn - 1][0]) + \(subjects[turn - 1][1]) = ?"
+        }
+    }
+    
+    private func updateMissCountLabel() {
+        let missN: Int = missCount ?? 0
+        missCountLabel.text = String(format: NSLocalizedString("game_missCount", comment: ""), missN)
+    }
+    
+    private func startMemorizeTurn() {
+        indicatorAnimationView.setAnimation(named: "dottedLoading.json")
+        indicatorAnimationView.loopAnimation = false
+        indicatorAnimationView.animationSpeed = 0.33333
+        indicatorAnimationView.play(completion: { (_: Bool) in
+            self.nextTurn()
+        })
+    }
+    
+    private func nextTurn() {
+        turnCount! += 1
+        switch self.status {
+        case .memorize:
+            startMemorizeTurn()
+        case .answer:
+            numPad.isHidden = false
+            indicatorAnimationView.isHidden = true
+        case .trail:
+            subjectLabel.text = "?"
+            memorizeLabel.text = String(format: NSLocalizedString("game_answerNBack", comment: ""), levelN!)
+        default:
+            numPad.isHidden = false
         }
     }
 }
@@ -131,7 +186,32 @@ extension CalcGameViewController {
 extension CalcGameViewController: NumPadDelegate, NumPadDataSource {
     
     func numPad(_ numPad: NumPad, itemTapped item: Item, atPosition position: Position) {
-        print(position)
+        if status == .answer || status == .trail {
+            guard let number = numbers[position.row][position.column] else { return }
+            let answerDigit:Int = (subjects[turnCount! - levelN! - 1][0] + subjects[turnCount! - levelN! - 1][1]) % 10
+            print(answerDigit)
+            if number == answerDigit {
+                //正解
+                indicatorAnimationView.setAnimation(named: "correct.json")
+                indicatorAnimationView.loopAnimation = false
+                indicatorAnimationView.animationSpeed = 4
+                indicatorAnimationView.isHidden = false
+                indicatorAnimationView.play(completion: { (_: Bool) in
+                    self.indicatorAnimationView.isHidden = true
+                    self.nextTurn()
+                })
+            } else {
+                //不正解
+                indicatorAnimationView.setAnimation(named: "wrong.json")
+                indicatorAnimationView.loopAnimation = false
+                indicatorAnimationView.animationSpeed = 6
+                indicatorAnimationView.isHidden = false
+                indicatorAnimationView.play(completion: { (_: Bool) in
+                    self.indicatorAnimationView.isHidden = true
+                    self.missCount! += 1
+                })
+            }
+        }
     }
 
     func numPad(_ numPad: NumPad, itemAtPosition position: Position) -> Item {

@@ -9,6 +9,7 @@ PODS:
   - fluid-slider (1.0.0):
     - pop
   - IBAnimatable (5.2.1)
+  - lottie-ios (2.5.2)
   - LTMorphingLabel (0.5.9)
   - Material (2.16.4):
     - Material/Core (= 2.16.4)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - CDAlertView
   - fluid-slider
   - IBAnimatable (~> 5.0)
+  - lottie-ios
   - LTMorphingLabel
   - Material
   - NumPad
@@ -52,6 +54,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - fluid-slider
     - IBAnimatable
+    - lottie-ios
     - LTMorphingLabel
     - Material
     - Motion
@@ -70,6 +73,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
   IBAnimatable: a46b835ec6875178516cf7e014a40194d6bfa3fc
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   LTMorphingLabel: e6047354486aa4ba52d36ccc40be8874b50e1ef1
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
@@ -83,6 +87,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
 
-PODFILE CHECKSUM: 0cf05ca471b62f3be62a89c6709e9ce03cae94fe
+PODFILE CHECKSUM: 131c9690337895f909355119bb5059c4c137b59b
 
 COCOAPODS: 1.5.3

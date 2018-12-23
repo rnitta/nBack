@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Level: n ="; ObjectID = "0OZ-Nt-GuM"; */
+"0OZ-Nt-GuM.text" = "Level: n =";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Ix-Gs-A1T"; */
+"3Ix-Gs-A1T.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3j5-UI-MqP"; */
+"3j5-UI-MqP.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "734-gs-4Ae"; */
+"734-gs-4Ae.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "N Back"; ObjectID = "8hZ-Q2-Xmx"; */
+"8hZ-Q2-Xmx.text" = "N Back";
+
+/* Class = "UILabel"; text = "N + N = ?"; ObjectID = "IFH-5f-AN0"; */
+"IFH-5f-AN0.text" = "N + N = ?";
+
+/* Class = "UILabel"; text = "Status: 1, 3, 5"; ObjectID = "JQL-Ez-TJu"; */
+"JQL-Ez-TJu.text" = "Status: 1, 3, 5";
+
+/* Class = "UIButton"; normalTitle = "gonext"; ObjectID = "NP2-Ee-zqj"; */
+"NP2-Ee-zqj.normalTitle" = "gonext";
+
+/* Class = "UILabel"; text = "Memorize the last digit of \"?\""; ObjectID = "hQ6-tV-l7P"; */
+"hQ6-tV-l7P.text" = "Memorize the last digit of \"?\"";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "qTc-bo-ps7"; */
+"qTc-bo-ps7.text" = "3";
+
+/* Class = "UILabel"; text = "|"; ObjectID = "v5C-Oa-t3p"; */
+"v5C-Oa-t3p.text" = "|";
+
+/* Class = "UILabel"; text = "Miss: N"; ObjectID = "xZQ-d2-Gbs"; */
+"xZQ-d2-Gbs.text" = "Miss: N";

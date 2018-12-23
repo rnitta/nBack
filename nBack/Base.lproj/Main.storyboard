@@ -271,7 +271,7 @@
                                     <constraint firstAttribute="width" constant="100" id="XMg-RL-7DN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="734-gs-4Ae">
@@ -282,6 +282,23 @@
                                     <action selector="dis:" destination="2yG-jg-nG2" eventType="touchUpInside" id="ZWR-Hk-ZHy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memorize the last digit of &quot;?&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-tV-l7P">
+                                <rect key="frame" x="94.5" y="142" width="186.5" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="RfY-35-wCW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="xY8-TE-hm7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="94i-6D-nW7" customClass="LOTAnimationView">
+                                <rect key="frame" x="139" y="170" width="97" height="97"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="94i-6D-nW7" secondAttribute="height" multiplier="1:1" id="v5Q-Vf-2rd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -290,22 +307,31 @@
                             <constraint firstItem="ReW-77-CWM" firstAttribute="leading" secondItem="FmP-OJ-1jC" secondAttribute="leading" id="D19-8r-3KV"/>
                             <constraint firstItem="bwj-J1-lgZ" firstAttribute="trailing" secondItem="xZQ-d2-Gbs" secondAttribute="trailing" constant="15" id="Dc2-7C-JrZ"/>
                             <constraint firstItem="IFH-5f-AN0" firstAttribute="centerX" secondItem="FmP-OJ-1jC" secondAttribute="centerX" id="FMy-8e-apj"/>
+                            <constraint firstItem="94i-6D-nW7" firstAttribute="centerX" secondItem="FmP-OJ-1jC" secondAttribute="centerX" id="G4w-hX-jHH"/>
                             <constraint firstItem="ReW-77-CWM" firstAttribute="top" secondItem="xZQ-d2-Gbs" secondAttribute="bottom" constant="10" id="PFw-0T-Y0c"/>
                             <constraint firstItem="bwj-J1-lgZ" firstAttribute="bottom" secondItem="cPR-0M-TSa" secondAttribute="bottom" id="QMM-sG-3mH"/>
                             <constraint firstAttribute="trailing" secondItem="ReW-77-CWM" secondAttribute="trailing" id="SEt-kC-fc7"/>
                             <constraint firstItem="cPR-0M-TSa" firstAttribute="leading" secondItem="bwj-J1-lgZ" secondAttribute="leading" id="UjT-hV-GYo"/>
                             <constraint firstItem="cPR-0M-TSa" firstAttribute="top" secondItem="ReW-77-CWM" secondAttribute="bottom" id="Xo2-7c-fBO"/>
                             <constraint firstItem="8hZ-Q2-Xmx" firstAttribute="leading" secondItem="bwj-J1-lgZ" secondAttribute="leading" constant="30" id="a9F-zM-OKJ"/>
+                            <constraint firstItem="hQ6-tV-l7P" firstAttribute="top" secondItem="IFH-5f-AN0" secondAttribute="bottom" constant="10" id="aXO-uG-Try"/>
                             <constraint firstItem="bwj-J1-lgZ" firstAttribute="trailing" secondItem="8hZ-Q2-Xmx" secondAttribute="trailing" constant="30" id="cVB-cK-DHs"/>
+                            <constraint firstItem="hQ6-tV-l7P" firstAttribute="centerX" secondItem="FmP-OJ-1jC" secondAttribute="centerX" id="cwK-mS-xXF"/>
+                            <constraint firstItem="94i-6D-nW7" firstAttribute="height" secondItem="bwj-J1-lgZ" secondAttribute="height" multiplier="0.15" id="hgA-g3-Kdc"/>
                             <constraint firstItem="8hZ-Q2-Xmx" firstAttribute="top" secondItem="bwj-J1-lgZ" secondAttribute="top" constant="10" id="nGi-TB-JA8"/>
+                            <constraint firstItem="94i-6D-nW7" firstAttribute="top" secondItem="hQ6-tV-l7P" secondAttribute="bottom" constant="10" id="uq2-G6-ORJ"/>
                             <constraint firstItem="bwj-J1-lgZ" firstAttribute="trailing" secondItem="cPR-0M-TSa" secondAttribute="trailing" id="wJG-kr-Twj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bwj-J1-lgZ"/>
                     </view>
                     <connections>
+                        <outlet property="countDownAnimationView" destination="3hV-SW-4gr" id="Fyz-sp-oTJ"/>
                         <outlet property="countDownLabel" destination="qTc-bo-ps7" id="eeO-lY-uGn"/>
                         <outlet property="countDownView" destination="gql-eZ-wIo" id="VnL-hp-W1e"/>
+                        <outlet property="indicatorAnimationView" destination="94i-6D-nW7" id="28V-TZ-0gz"/>
                         <outlet property="levelLabel" destination="8hZ-Q2-Xmx" id="Lb9-IV-gnN"/>
+                        <outlet property="memorizeLabel" destination="hQ6-tV-l7P" id="qCY-HK-LeQ"/>
+                        <outlet property="missCountLabel" destination="xZQ-d2-Gbs" id="XAn-tn-mZs"/>
                         <outlet property="numPad" destination="cPR-0M-TSa" id="5RK-rq-QcE"/>
                         <outlet property="progressBar" destination="ReW-77-CWM" id="DPI-zh-7b1"/>
                         <outlet property="subjectLabel" destination="IFH-5f-AN0" id="5If-GF-rt1"/>
@@ -316,17 +342,30 @@
                     <rect key="frame" x="0.0" y="0.0" width="362" height="432"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-bo-ps7" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                            <rect key="frame" x="145.5" y="166" width="71.5" height="100"/>
-                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="100"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hV-SW-4gr" customClass="LOTAnimationView">
+                            <rect key="frame" x="56" y="91" width="250" height="250"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTc-bo-ps7" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                    <rect key="frame" x="89.5" y="75" width="71.5" height="100"/>
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="100"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="B0d-2x-Yg0"/>
+                                <constraint firstItem="qTc-bo-ps7" firstAttribute="centerY" secondItem="3hV-SW-4gr" secondAttribute="centerY" id="GI1-Rk-kVD"/>
+                                <constraint firstAttribute="width" secondItem="3hV-SW-4gr" secondAttribute="height" multiplier="1:1" id="nQc-XB-S1u"/>
+                                <constraint firstAttribute="height" constant="250" id="rsq-aA-kby"/>
+                                <constraint firstItem="qTc-bo-ps7" firstAttribute="centerX" secondItem="3hV-SW-4gr" secondAttribute="centerX" id="wjq-yv-14k"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="qTc-bo-ps7" firstAttribute="centerY" secondItem="gql-eZ-wIo" secondAttribute="centerY" id="qKQ-cm-cJR"/>
-                        <constraint firstItem="qTc-bo-ps7" firstAttribute="centerX" secondItem="gql-eZ-wIo" secondAttribute="centerX" id="syo-gF-qHZ"/>
+                        <constraint firstItem="3hV-SW-4gr" firstAttribute="centerY" secondItem="gql-eZ-wIo" secondAttribute="centerY" id="bLR-tm-xHe"/>
+                        <constraint firstItem="3hV-SW-4gr" firstAttribute="centerX" secondItem="gql-eZ-wIo" secondAttribute="centerX" id="puR-qc-GyK"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="any-fr-5mF"/>
                 </view>

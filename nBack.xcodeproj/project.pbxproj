@@ -27,6 +27,10 @@
 		87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7B50621CE4A3D00AA18FF /* NPad.swift */; };
 		87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B51C21CFA4D500AA18FF /* Localizable.strings */; };
 		87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B51F21CFA4E200AA18FF /* Localizable.strings */; };
+		87F7B52821CFE7A600AA18FF /* materialCountDown.json in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B52721CFE7A600AA18FF /* materialCountDown.json */; };
+		87F7B53021CFFB0000AA18FF /* dottedLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B52F21CFFB0000AA18FF /* dottedLoading.json */; };
+		87F7B53221D00C0100AA18FF /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B53121D00C0100AA18FF /* wrong.json */; };
+		87F7B53421D00C2500AA18FF /* correct.json in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B53321D00C2500AA18FF /* correct.json */; };
 		9E03F3860DDAA1DE29B54BE7 /* Pods_nBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62654F7A64B3DFD1D002597C /* Pods_nBack.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,11 @@
 		87F7B50621CE4A3D00AA18FF /* NPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPad.swift; sourceTree = "<group>"; };
 		87F7B51D21CFA4D500AA18FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		87F7B52021CFA4E200AA18FF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Localizable.strings; sourceTree = "<group>"; };
+		87F7B52521CFE5BF00AA18FF /* nBack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nBack-Bridging-Header.h"; sourceTree = "<group>"; };
+		87F7B52721CFE7A600AA18FF /* materialCountDown.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = materialCountDown.json; sourceTree = "<group>"; };
+		87F7B52F21CFFB0000AA18FF /* dottedLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dottedLoading.json; sourceTree = "<group>"; };
+		87F7B53121D00C0100AA18FF /* wrong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
+		87F7B53321D00C2500AA18FF /* correct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = correct.json; sourceTree = "<group>"; };
 		BDD29C01F4BFB139215DAD2F /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +143,7 @@
 		87BC504C21C3230D000B3134 /* nBack */ = {
 			isa = PBXGroup;
 			children = (
+				87F7B52621CFE78E00AA18FF /* animations */,
 				87F7B50A21CFA36700AA18FF /* Base.lproj */,
 				87F7B50F21CFA36700AA18FF /* ja.lproj */,
 				87578D9221CB31E300F76F54 /* views */,
@@ -146,6 +156,7 @@
 				87BC505421C3230E000B3134 /* Assets.xcassets */,
 				87BC505621C3230E000B3134 /* LaunchScreen.storyboard */,
 				87BC505921C3230E000B3134 /* Info.plist */,
+				87F7B52521CFE5BF00AA18FF /* nBack-Bridging-Header.h */,
 			);
 			path = nBack;
 			sourceTree = "<group>";
@@ -211,6 +222,17 @@
 				87F7B51F21CFA4E200AA18FF /* Localizable.strings */,
 			);
 			path = ja.lproj;
+			sourceTree = "<group>";
+		};
+		87F7B52621CFE78E00AA18FF /* animations */ = {
+			isa = PBXGroup;
+			children = (
+				87F7B52F21CFFB0000AA18FF /* dottedLoading.json */,
+				87F7B53321D00C2500AA18FF /* correct.json */,
+				87F7B53121D00C0100AA18FF /* wrong.json */,
+				87F7B52721CFE7A600AA18FF /* materialCountDown.json */,
+			);
+			path = animations;
 			sourceTree = "<group>";
 		};
 		E790389440E533A242AA951C /* Frameworks */ = {
@@ -282,15 +304,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F7B52821CFE7A600AA18FF /* materialCountDown.json in Resources */,
 				87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */,
 				87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */,
 				87BC506721C323B0000B3134 /* index.js in Resources */,
+				87F7B53021CFFB0000AA18FF /* dottedLoading.json in Resources */,
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
 				87BC506921C323B0000B3134 /* poly.html in Resources */,
 				87BC506621C323B0000B3134 /* three.min.js in Resources */,
+				87F7B53421D00C2500AA18FF /* correct.json in Resources */,
 				87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */,
 				87BC505521C3230E000B3134 /* Assets.xcassets in Resources */,
 				87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */,
+				87F7B53221D00C0100AA18FF /* wrong.json in Resources */,
 				87BC505321C3230D000B3134 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +347,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -342,6 +369,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -563,6 +591,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.amagrammer.nBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "nBack/nBack-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -583,6 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.amagrammer.nBack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "nBack/nBack-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
