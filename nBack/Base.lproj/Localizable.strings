@@ -9,10 +9,14 @@
 "root_levelIndicator" = "Level: n =";
 "root_calcGameNewRecordTitle" = "New Record in Calc";
 "root_calcGameNewRecordMessage" = "Perfect with Level: %d.\nPolygon has growed.";
+"root_gridGameNewRecordTitle" = "New Record in Grid";
+"root_gridGameNewRecordMessage" = "Perfect with Level: %d.\nPolygon has growed.";
 
-"game_memorize" = "Memorize the last digit of \"?\".";
+"game_memorizeDigit" = "Memorize the last digit of \"?\".";
+"game_memorizeGrid" = "Memorize the position of the green grid.";
 "game_missCount" = "Miss: %d";
-"game_answerNBack" = "Answer %d-back digit";
+"game_answerNBackDigit" = "Answer %d-back digit.";
+"game_memorizeGrid" = "Select %d-back green grid.";
 
 "game_completion_congratPerfect" = "Perfect!!";
 "game_completion_congratDone" = "Done!";

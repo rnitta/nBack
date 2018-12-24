@@ -22,4 +22,9 @@ extension UIColor {
     struct Border {
         static var ultraLightGray: UIColor { return #colorLiteral(red: 0.9827563167, green: 0.9759425521, blue: 0.9289438128, alpha: 1) }
     }
+    
+    struct GridGame {
+        static var regularGrid: UIColor { return #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1) }
+        static var hightlitedGrid: UIColor { return #colorLiteral(red: 0.03529411765, green: 0.6078431373, blue: 0.5803921569, alpha: 1) }
+    }
 }

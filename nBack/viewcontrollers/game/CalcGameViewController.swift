@@ -14,14 +14,6 @@ import Material
 import SVGKit
 import RealmSwift
 
-enum GameStatus {
-    case pending
-    case memorize
-    case answer
-    case trail
-    case end
-}
-
 class CalcGameViewController: UIViewController {
     var levelN: Int?
     private var subjects: [[Int]] = [] // 問題
@@ -37,27 +29,27 @@ class CalcGameViewController: UIViewController {
             updateMissCountLabel()
         }
     }
-    var status: GameStatus = .pending
-    var gameStartTime: Date!
-    var gameEndTime: Date!
-    @IBOutlet var countDownView: UIView!
-    @IBOutlet var countDownLabel: LTMorphingLabel!
-    @IBOutlet var countDownAnimationView: LOTAnimationView!
-    @IBOutlet var indicatorAnimationView: LOTAnimationView!
-    @IBOutlet var numPad: NumPad!
-    @IBOutlet var progressBar: UIProgressView!
-    @IBOutlet var levelLabel: UILabel!
-    @IBOutlet var subjectLabel: LTMorphingLabel!
-    @IBOutlet var memorizeLabel: UILabel!
-    @IBOutlet var missCountLabel: UILabel!
-    @IBOutlet var closeButton: FlatButton!
-    @IBOutlet var completionView: UIView!
-    @IBOutlet var completionAnimationView: LOTAnimationView!
-    @IBOutlet var completionLevelLabel: UILabel!
-    @IBOutlet var completionMissCountLabel: UILabel!
-    @IBOutlet var completionTimeElapsedLabel: UILabel!
-    @IBOutlet var completionCongratLabel: UILabel!
-    @IBOutlet var completionCloseButton: FlatButton!
+    private var status: GameStatus = .pending
+    private var gameStartTime: Date!
+    private var gameEndTime: Date!
+    @IBOutlet private var countDownView: UIView!
+    @IBOutlet private var countDownLabel: LTMorphingLabel!
+    @IBOutlet private var countDownAnimationView: LOTAnimationView!
+    @IBOutlet private var indicatorAnimationView: LOTAnimationView!
+    @IBOutlet private var numPad: NumPad!
+    @IBOutlet private var progressBar: UIProgressView!
+    @IBOutlet private var levelLabel: UILabel!
+    @IBOutlet private var subjectLabel: LTMorphingLabel!
+    @IBOutlet private var memorizeLabel: UILabel!
+    @IBOutlet private var missCountLabel: UILabel!
+    @IBOutlet private var closeButton: FlatButton!
+    @IBOutlet private var completionView: UIView!
+    @IBOutlet private var completionAnimationView: LOTAnimationView!
+    @IBOutlet private var completionLevelLabel: UILabel!
+    @IBOutlet private var completionMissCountLabel: UILabel!
+    @IBOutlet private var completionTimeElapsedLabel: UILabel!
+    @IBOutlet private var completionCongratLabel: UILabel!
+    @IBOutlet private var completionCloseButton: FlatButton!
     @IBAction func completionCloseButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -142,11 +134,13 @@ extension CalcGameViewController {
             realm.add(data)
         }
         
-        let userDefaults = UserDefaults.standard
-        let prevMaxLevel: Int = userDefaults.integer(forKey: "calcMaxLevel") // 初期値0
-        if prevMaxLevel < levelN! {
-            userDefaults.set(levelN!, forKey: "calcMaxLevel")
-            userDefaults.set(true, forKey: "isCalcMaxLevelUpdated")
+        if missCount! == 0 {
+            let userDefaults = UserDefaults.standard
+            let prevMaxLevel: Int = userDefaults.integer(forKey: "calcMaxLevel") // 初期値0
+            if prevMaxLevel < levelN! {
+                userDefaults.set(levelN!, forKey: "calcMaxLevel")
+                userDefaults.set(true, forKey: "isCalcMaxLevelUpdated")
+            }
         }
     }
 }
@@ -156,7 +150,7 @@ extension CalcGameViewController {
     private func initView() {
         turnCount = 1
         missCount = 0
-        memorizeLabel.text = NSLocalizedString("game_memorize", comment: "")
+        memorizeLabel.text = NSLocalizedString("game_memorizeDigit", comment: "")
         missCountLabel.text = String(format: NSLocalizedString("game_missCount", comment: ""), 0)
         subjectLabel.morphingEffect = .evaporate
         updateSubjectLabel()
@@ -257,7 +251,7 @@ extension CalcGameViewController {
             indicatorAnimationView.isHidden = true
         case .trail:
             subjectLabel.text = "?"
-            memorizeLabel.text = String(format: NSLocalizedString("game_answerNBack", comment: ""), levelN!)
+            memorizeLabel.text = String(format: NSLocalizedString("game_answerNBackDigit", comment: ""), levelN!)
         case .end:
             completionViewAppear()
         default:

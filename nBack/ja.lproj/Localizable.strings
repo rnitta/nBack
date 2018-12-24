@@ -9,10 +9,15 @@
 "root_levelIndicator" = "レベル: n =";
 "root_calcGameNewRecordTitle" = "計算で新記録！";
 "root_calcGameNewRecordMessage" = "レベル%dでノーミスでした！\n多面体が成長しました。";
+"root_gridGameNewRecordTitle" = "グリッドで新記録！";
+"root_gridGameNewRecordMessage" = "レベル%dでノーミスでした！\n多面体の色が成長しました。";
 
-"game_memorize" = "?の下1桁を記憶してください";
+
+"game_memorizeDigit" = "?の下1桁を記憶してください";
+"game_memorizeGrid" = "緑色のグリッドの位置を記憶してください";
 "game_missCount" = "ミス数: %d";
-"game_answerNBack" = "%d個前の数字は？";
+"game_answerNBackDigit" = "%d個前の数字は？";
+"game_answerNBackGrid" = "%d個前の色付きグリッドは？";
 
 "game_completion_congratPerfect" = "完璧!!";
 "game_completion_congratDone" = "完了!";

@@ -47,6 +47,7 @@ class RootViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let userDefaults = UserDefaults.standard
+        // まとめてメソッドきりだせそう
         let calcMaxLevel:Int = userDefaults.integer(forKey: "calcMaxLevel")
         if userDefaults.bool(forKey: "isCalcMaxLevelUpdated") {
             // アラート表示
@@ -57,14 +58,26 @@ class RootViewController: UIViewController {
             
             userDefaults.set(false, forKey: "isCalcMaxLevelUpdated")
         }
+        
+        let gridMaxLevel:Int = userDefaults.integer(forKey: "gridMaxLevel")
+        if userDefaults.bool(forKey: "isGridMaxLevelUpdated") {
+            
+            let alert = CDAlertView(title: NSLocalizedString("root_gridGameNewRecordTitle", comment: ""), message: String(format: NSLocalizedString("root_gridGameNewRecordMessage", comment: ""), gridMaxLevel), type: .success)
+            let doneAction = CDAlertViewAction(title: "OK😇")
+            alert.add(action: doneAction)
+            alert.show()
+            
+            userDefaults.set(false, forKey: "isGridMaxLevelUpdated")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "calcGameSegue" {
             let calcGameViewController: CalcGameViewController = segue.destination as! CalcGameViewController
-            calcGameViewController.levelN = self.levelN // 7,8でずれる
+            calcGameViewController.levelN = self.levelN
         } else if segue.identifier == "gridGameSegue" {
-
+            let gridGameViewController: GridGameViewController = segue.destination as! GridGameViewController
+            gridGameViewController.levelN = self.levelN
         }
     }
     

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8724B4A921D108A800724303 /* calcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4A821D108A800724303 /* calcData.swift */; };
+		8724B4AB21D12B0C00724303 /* gridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AA21D12B0C00724303 /* gridData.swift */; };
+		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
 		87578D9421CB320800F76F54 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87578D9321CB320800F76F54 /* LaunchView.swift */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
@@ -42,6 +44,8 @@
 		16158A49AE9C4DC5D7C342AA /* Pods-nBack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.release.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.release.xcconfig"; sourceTree = "<group>"; };
 		62654F7A64B3DFD1D002597C /* Pods_nBack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nBack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8724B4A821D108A800724303 /* calcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcData.swift; sourceTree = "<group>"; };
+		8724B4AA21D12B0C00724303 /* gridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridData.swift; sourceTree = "<group>"; };
+		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		87578D9321CB320800F76F54 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8724B4A821D108A800724303 /* calcData.swift */,
+				8724B4AA21D12B0C00724303 /* gridData.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				87B4FD9021C40D9100956562 /* UIImage.swift */,
 				87B4FD9521C4F8D300956562 /* UIButton.swift */,
 				87F7B50621CE4A3D00AA18FF /* NPad.swift */,
+				8724B4AC21D14FCA00724303 /* GameStatus.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -439,6 +445,8 @@
 				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,
 				87B4FD9E21C526D400956562 /* GridGameViewController.swift in Sources */,
 				87578D9421CB320800F76F54 /* LaunchView.swift in Sources */,
+				8724B4AB21D12B0C00724303 /* gridData.swift in Sources */,
+				8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */,
 				87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */,
 				87B4FD9621C4F8D300956562 /* UIButton.swift in Sources */,
 			);
