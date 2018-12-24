@@ -6,6 +6,16 @@
   Copyright © 2018 amagrammer. All rights reserved.
 */
 
+"root_levelIndicator" = "Level: n =";
+"root_calcGameNewRecordTitle" = "New Record in Calc";
+"root_calcGameNewRecordMessage" = "Perfect with Level: %d.\nPolygon has growed.";
+
 "game_memorize" = "Memorize the last digit of \"?\".";
 "game_missCount" = "Miss: %d";
 "game_answerNBack" = "Answer %d-back digit";
+
+"game_completion_congratPerfect" = "Perfect!!";
+"game_completion_congratDone" = "Done!";
+"game_completion_level" = "Level: %d";
+"game_completion_timeElapsed" = "Time Elapsed: %.1f s";
+"game_completion_missCount" = "Miss Count: %d";

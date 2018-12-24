@@ -10,6 +10,9 @@ import UIKit
 import LTMorphingLabel
 import IBAnimatable
 import NumPad
+import Material
+import SVGKit
+import RealmSwift
 
 enum GameStatus {
     case pending
@@ -17,10 +20,6 @@ enum GameStatus {
     case answer
     case trail
     case end
-    
-    func text() -> String {
-        return ""
-    }
 }
 
 class CalcGameViewController: UIViewController {
@@ -39,6 +38,8 @@ class CalcGameViewController: UIViewController {
         }
     }
     var status: GameStatus = .pending
+    var gameStartTime: Date!
+    var gameEndTime: Date!
     @IBOutlet var countDownView: UIView!
     @IBOutlet var countDownLabel: LTMorphingLabel!
     @IBOutlet var countDownAnimationView: LOTAnimationView!
@@ -49,6 +50,21 @@ class CalcGameViewController: UIViewController {
     @IBOutlet var subjectLabel: LTMorphingLabel!
     @IBOutlet var memorizeLabel: UILabel!
     @IBOutlet var missCountLabel: UILabel!
+    @IBOutlet var closeButton: FlatButton!
+    @IBOutlet var completionView: UIView!
+    @IBOutlet var completionAnimationView: LOTAnimationView!
+    @IBOutlet var completionLevelLabel: UILabel!
+    @IBOutlet var completionMissCountLabel: UILabel!
+    @IBOutlet var completionTimeElapsedLabel: UILabel!
+    @IBOutlet var completionCongratLabel: UILabel!
+    @IBOutlet var completionCloseButton: FlatButton!
+    @IBAction func completionCloseButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -83,11 +99,6 @@ class CalcGameViewController: UIViewController {
             subjects += [nums]
         }
     }
-    
-    
-    @IBAction func dis(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
 }
 
 //MARK: - カウントダウン関連
@@ -110,8 +121,32 @@ extension CalcGameViewController {
                     self.countDownAnimationView.pause()
                     self.countDownView.removeFromSuperview()
                     self.startMemorizeTurn()
+                    self.gameStartTime = Date() //時間計測開始
                 }
             }
+        }
+    }
+}
+
+//MARK: - 保存
+extension CalcGameViewController {
+    private func saveResult() {
+        let realm = try! Realm()
+        let data = calcData()
+        data.level = levelN!
+        data.elapsedTime = gameEndTime.timeIntervalSince(gameStartTime)
+        data.miss = missCount!
+        data.timeStamp = Date()
+        
+        try! realm.write() {
+            realm.add(data)
+        }
+        
+        let userDefaults = UserDefaults.standard
+        let prevMaxLevel: Int = userDefaults.integer(forKey: "calcMaxLevel") // 初期値0
+        if prevMaxLevel < levelN! {
+            userDefaults.set(levelN!, forKey: "calcMaxLevel")
+            userDefaults.set(true, forKey: "isCalcMaxLevelUpdated")
         }
     }
 }
@@ -125,11 +160,19 @@ extension CalcGameViewController {
         missCountLabel.text = String(format: NSLocalizedString("game_missCount", comment: ""), 0)
         subjectLabel.morphingEffect = .evaporate
         updateSubjectLabel()
+        
+        // 閉じるボタン
+        closeButton.backgroundColor = UIColor.clear
+        closeButton.tintColor = UIColor.darkGray
+        if let closeButtonSVG = SVGKImage(named: "closeX_icon.svg") {
+            closeButtonSVG.size = CGSize(width: closeButton.bounds.width * 0.8, height: closeButton.bounds.height * 0.8)
+            closeButton.setImage(closeButtonSVG.uiImage, for: .normal)
+        }
     }
     
     private func updateTurn() {
         if let level = levelN, let turn = turnCount {
-            let prog: Float = Float(turn) / Float(level * 2 + 9)
+            let prog: Float = Float(turn) / Float(level * 2 + 10)
             progressBar.setProgress(prog, animated: true)
             switch true {
             case turn <= level:
@@ -166,6 +209,44 @@ extension CalcGameViewController {
         })
     }
     
+    private func completionViewAppear() {
+        // 結果ラベル
+        gameEndTime = Date()
+        let span:Double = self.gameEndTime.timeIntervalSince(self.gameStartTime)
+        let congratKeyStr: String = missCount! == 0 ? "game_completion_congratPerfect" : "game_completion_congratDone"
+        completionCongratLabel.text = NSLocalizedString(congratKeyStr, comment: "")
+        completionLevelLabel.text = String(format: NSLocalizedString("game_completion_level", comment: ""), levelN!)
+        completionTimeElapsedLabel.text = String(format: NSLocalizedString("game_completion_timeElapsed", comment: ""), span)
+        completionMissCountLabel.text = String(format: NSLocalizedString("game_completion_missCount", comment: ""), missCount!)
+        completionLevelLabel.isHidden = true
+        completionTimeElapsedLabel.isHidden = true
+        completionMissCountLabel.isHidden = true
+        completionCloseButton.isHidden = true
+        
+        // 結果保存　↑時間計測終了よりあとにする
+        saveResult()
+
+        // アニメーション
+        completionView.frame = self.view.frame
+        completionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(completionView)
+        if missCount! == 0 {
+            completionAnimationView.setAnimation(named: "clap.json")
+        } else {
+            completionAnimationView.setAnimation(named: "fabulousLike.json")
+        }
+        completionAnimationView.animationSpeed = 1
+        completionAnimationView.loopAnimation = false
+        completionAnimationView.play(completion: { (_: Bool) in
+            self.completionLevelLabel.isHidden = false
+            self.completionTimeElapsedLabel.isHidden = false
+            self.completionMissCountLabel.isHidden = false
+            self.completionCloseButton.isHidden = false
+
+        })
+
+    }
+    
     private func nextTurn() {
         turnCount! += 1
         switch self.status {
@@ -177,6 +258,8 @@ extension CalcGameViewController {
         case .trail:
             subjectLabel.text = "?"
             memorizeLabel.text = String(format: NSLocalizedString("game_answerNBack", comment: ""), levelN!)
+        case .end:
+            completionViewAppear()
         default:
             numPad.isHidden = false
         }

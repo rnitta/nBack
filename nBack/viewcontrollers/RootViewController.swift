@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import SVGKit
 import fluid_slider
+import CDAlertView
 
 class RootViewController: UIViewController {
 
@@ -41,6 +42,21 @@ class RootViewController: UIViewController {
         
         setupGameButtons()
         setupSlider()
+        levellabel.text = NSLocalizedString("root_levelIndicator", comment: "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let userDefaults = UserDefaults.standard
+        let calcMaxLevel:Int = userDefaults.integer(forKey: "calcMaxLevel")
+        if userDefaults.bool(forKey: "isCalcMaxLevelUpdated") {
+            // アラート表示
+            let alert = CDAlertView(title: NSLocalizedString("root_calcGameNewRecordTitle", comment: ""), message: String(format: NSLocalizedString("root_calcGameNewRecordMessage", comment: ""), calcMaxLevel), type: .success)
+            let doneAction = CDAlertViewAction(title: "OK💪")
+            alert.add(action: doneAction)
+            alert.show()
+            
+            userDefaults.set(false, forKey: "isCalcMaxLevelUpdated")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,16 +87,14 @@ class RootViewController: UIViewController {
         nSlider.shadowOffset = CGSize(width: 0, height: 10)
         nSlider.shadowBlur = 5
         nSlider.fraction = CGFloat(Float(initNum - minNum) / Float(maxNum))
-        nSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
+        //nSlider.shadowColor = UIColor(white: 0, alpha: 0.1)
         nSlider.contentViewColor = UIColor.Set.lightBase
         nSlider.valueViewColor = UIColor.darkGray
         nSlider.didBeginTracking = { [weak self] _ in
             self?.setLabelHidden(true, animated: true)
         }
         nSlider.didEndTracking = { [weak self] slider in
-            print(slider.fraction)
             let selectedN = Int(floor(Float(slider.fraction) * Float(maxNum - minNum) + Float(minNum)))
-            print(selectedN)
             self?.levelN = selectedN
             self?.setLabelHidden(false, animated: true)
         }

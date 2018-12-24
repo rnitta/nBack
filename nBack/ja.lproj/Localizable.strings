@@ -6,6 +6,16 @@
   Copyright © 2018 amagrammer. All rights reserved.
 */
 
+"root_levelIndicator" = "レベル: n =";
+"root_calcGameNewRecordTitle" = "計算で新記録！";
+"root_calcGameNewRecordMessage" = "レベル%dでノーミスでした！\n多面体が成長しました。";
+
 "game_memorize" = "?の下1桁を記憶してください";
 "game_missCount" = "ミス数: %d";
 "game_answerNBack" = "%d個前の数字は？";
+
+"game_completion_congratPerfect" = "完璧!!";
+"game_completion_congratDone" = "完了!";
+"game_completion_level" = "レベル: %d";
+"game_completion_timeElapsed" = "経過時間: %.1f s";
+"game_completion_missCount" = "ミス数: %d";
