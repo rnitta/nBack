@@ -84,6 +84,7 @@ class GridGameViewController: UIViewController {
     private func initView() {
         turnCount = 1
         missCount = 0
+        gridPad.isHidden = true
         levelLabel.text = String(format: "%d Back", levelN)
         instructionLabel.text = NSLocalizedString("game_memorizeGrid", comment: "")
         missCountLabel.text = String(format: NSLocalizedString("game_missCount", comment: ""), 0)
@@ -274,7 +275,6 @@ extension GridGameViewController: CollectionViewDelegate, CollectionViewDataSour
             prevNums = nums
             subjects += [nums]
         }
-        print(subjects)
     }
     private func setCollectionSizes() {
         let width = floor((subjectCollectionView.frame.width - 8) / 4)

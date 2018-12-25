@@ -267,7 +267,6 @@ extension CalcGameViewController: NumPadDelegate, NumPadDataSource {
         if status == .answer || status == .trail {
             guard let number = numbers[position.row][position.column] else { return }
             let answerDigit:Int = (subjects[turnCount! - levelN! - 1][0] + subjects[turnCount! - levelN! - 1][1]) % 10
-            print(answerDigit)
             if number == answerDigit {
                 //正解
                 indicatorAnimationView.setAnimation(named: "correct.json")

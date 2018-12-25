@@ -22,7 +22,8 @@ class RootViewController: UIViewController {
     @IBOutlet var levellabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     var levelN: Int = 1
-
+    let userDefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         polyWebView.navigationDelegate = self
@@ -43,31 +44,30 @@ class RootViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let userDefaults = UserDefaults.standard
         // まとめてメソッドきりだせそう
-        let calcMaxLevel:Int = userDefaults.integer(forKey: "calcMaxLevel")
-        if userDefaults.bool(forKey: "isCalcMaxLevelUpdated") {
+        let calcMaxLevel:Int = userDefault.integer(forKey: "calcMaxLevel")
+        if userDefault.bool(forKey: "isCalcMaxLevelUpdated") {
             // アラート表示
             let alert = CDAlertView(title: NSLocalizedString("root_calcGameNewRecordTitle", comment: ""), message: String(format: NSLocalizedString("root_calcGameNewRecordMessage", comment: ""), calcMaxLevel), type: .success)
             let doneAction = CDAlertViewAction(title: "OK💪")
             alert.add(action: doneAction)
             alert.show()
             
-            userDefaults.set(false, forKey: "isCalcMaxLevelUpdated")
-            polyWebView.evaluateJavaScript(execJSString(), completionHandler: nil)
+            userDefault.set(false, forKey: "isCalcMaxLevelUpdated")
         }
         
-        let gridMaxLevel:Int = userDefaults.integer(forKey: "gridMaxLevel")
-        if userDefaults.bool(forKey: "isGridMaxLevelUpdated") {
+        let gridMaxLevel:Int = userDefault.integer(forKey: "gridMaxLevel")
+        if userDefault.bool(forKey: "isGridMaxLevelUpdated") {
             
             let alert = CDAlertView(title: NSLocalizedString("root_gridGameNewRecordTitle", comment: ""), message: String(format: NSLocalizedString("root_gridGameNewRecordMessage", comment: ""), gridMaxLevel), type: .success)
             let doneAction = CDAlertViewAction(title: "OK😇")
             alert.add(action: doneAction)
             alert.show()
             
-            userDefaults.set(false, forKey: "isGridMaxLevelUpdated")
-            polyWebView.evaluateJavaScript(execJSString(), completionHandler: nil)
+            userDefault.set(false, forKey: "isGridMaxLevelUpdated")
         }
+        
+        polyWebView.evaluateJavaScript(execJSString(), completionHandler: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,7 +83,7 @@ class RootViewController: UIViewController {
     private func setupSlider() {
         let maxNum = 9
         let minNum = 1
-        let initNum = 1
+        let initNum:Int = 1
         let labelTextAttributes: [NSAttributedString.Key : Any] = [.font: UIFont(name: "HiraginoSans-W3", size: 12)!, .foregroundColor: UIColor.lightGray]
         nSlider.attributedTextForFraction = { fraction in
             let formatter = NumberFormatter()
@@ -154,7 +154,6 @@ extension RootViewController: WKNavigationDelegate {
 
 extension RootViewController {
     private func execJSString() -> String {
-        let userDefault = UserDefaults.standard
         let calcMaxLevel = userDefault.integer(forKey: "calcMaxLevel")
         let gridMaxLevel = userDefault.integer(forKey: "gridMaxLevel")
         let totalExp = userDefault.integer(forKey: "totalExp")

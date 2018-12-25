@@ -109,7 +109,7 @@
                                     <segue destination="2yG-jg-nG2" kind="custom" identifier="calcGameSegue" customClass="PresentCardsSegue" customModule="IBAnimatable" id="j3D-S9-nzj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: 1, 3, 5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-Ez-TJu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: 1-3-5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQL-Ez-TJu">
                                 <rect key="frame" x="155" y="362" width="200" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="nbL-r3-FMN"/>
