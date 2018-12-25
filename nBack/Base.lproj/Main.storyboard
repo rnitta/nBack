@@ -13,7 +13,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TutorialViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="TutorialViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,6 +48,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isMotionEnabledForSubviews" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="skipButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEZ-jg-BSU"/>
                                     <segue destination="aId-nK-eHv" kind="custom" customClass="PresentExplodeSegue" customModule="IBAnimatable" id="yss-Sx-j4Z"/>
                                 </connections>
                             </button>
@@ -70,7 +71,7 @@
         <!--Root View Controller-->
         <scene sceneID="CZj-2a-MyG">
             <objects>
-                <viewController id="aId-nK-eHv" customClass="RootViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aId-nK-eHv" customClass="RootViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o0R-Ib-6xU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,14 +170,6 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ix-Gs-A1T">
-                                <rect key="frame" x="177" y="416" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="auaua:" destination="aId-nK-eHv" eventType="touchUpInside" id="sUe-Ii-wie"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.26379683613777161" blue="0.26379683613777161" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -209,6 +202,7 @@
                         <outlet property="nSlider" destination="XoH-hj-FtF" id="AV3-YC-Z91"/>
                         <outlet property="numberGameButton" destination="X36-Vf-AfO" id="p5d-cG-acV"/>
                         <outlet property="polyWebView" destination="5lc-vS-hpd" id="nlw-ef-R5q"/>
+                        <outlet property="statusLabel" destination="JQL-Ez-TJu" id="pIg-Kd-tnd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4um-59-EFh" userLabel="First Responder" sceneMemberID="firstResponder"/>

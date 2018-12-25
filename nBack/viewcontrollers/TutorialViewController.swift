@@ -12,7 +12,11 @@ import paper_onboarding
 // FIXME: 一度表示したら二度と出ないようにする app delegateで?
 class TutorialViewController: UIViewController {
 
+    let userDefault = UserDefaults.standard
     @IBOutlet var skipButton: UIButton!
+    @IBAction func skipButtonTapped(_ sender: UIButton) {
+        userDefault.set(true, forKey: "isTutorialSkipped")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,17 +53,35 @@ extension TutorialViewController: PaperOnboardingDataSource {
     }
 
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
-        return OnboardingItemInfo(
-            informationImage: UIImage(),
-            title: "タイトル\(index)",
-            description: "説明\(index)",
-            pageIcon: UIImage(),
-            color: [UIColor.Tutorial.background0, UIColor.Tutorial.background1, UIColor.Tutorial.background2][index],
-            titleColor: UIColor.white,
-            descriptionColor: UIColor.lightGray,
-            titleFont: UIFont.systemFont(ofSize: 20),
-            descriptionFont: UIFont.systemFont(ofSize: 14)
-        )
+        return [
+            OnboardingItemInfo(informationImage: UIImage(),
+                               title: NSLocalizedString("tutorial_0title", comment: ""),
+                               description: NSLocalizedString("tutorial_0desc", comment: ""),
+                               pageIcon: UIImage(),
+                               color: UIColor.Tutorial.background0,
+                               titleColor: UIColor.Tutorial.title,
+                               descriptionColor: UIColor.Tutorial.desc,
+                               titleFont: UIFont(name: "HiraginoSans-W6", size: CGFloat(20))!,
+                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: CGFloat(14))!),
+            OnboardingItemInfo(informationImage: UIImage(),
+                               title: NSLocalizedString("tutorial_1title", comment: ""),
+                               description: NSLocalizedString("tutorial_1desc", comment: ""),
+                               pageIcon: UIImage(),
+                               color: UIColor.Tutorial.background1,
+                               titleColor: UIColor.Tutorial.title,
+                               descriptionColor: UIColor.Tutorial.desc,
+                               titleFont: UIFont(name: "HiraginoSans-W6", size: CGFloat(20))!,
+                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: CGFloat(14))!),
+            OnboardingItemInfo(informationImage: UIImage(),
+                               title: NSLocalizedString("tutorial_2title", comment: ""),
+                               description: NSLocalizedString("tutorial_2desc", comment: ""),
+                               pageIcon: UIImage(),
+                               color: UIColor.Tutorial.background2,
+                               titleColor: UIColor.Tutorial.title,
+                               descriptionColor: UIColor.Tutorial.desc,
+                               titleFont: UIFont(name: "HiraginoSans-W6", size: CGFloat(20))!,
+                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: CGFloat(14))!)
+            ][index]
     }
 }
 

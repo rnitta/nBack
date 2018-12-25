@@ -20,11 +20,7 @@ class RootViewController: UIViewController {
     @IBOutlet var gridGameButton: UIButton!
     @IBOutlet var nSlider: Slider!
     @IBOutlet var levellabel: UILabel!
-    @IBAction func auaua(_ sender: UIButton) {
-        let execJS: String = "init(\(Int.random(in: 0...9)), \(Int.random(in: 50...200)), 0x668db6);"
-        polyWebView.evaluateJavaScript(execJS, completionHandler: { (object, error) -> Void in
-        })
-    }
+    @IBOutlet var statusLabel: UILabel!
     var levelN: Int = 1
 
     override func viewDidLoad() {
@@ -162,8 +158,10 @@ extension RootViewController {
         let calcMaxLevel = userDefault.integer(forKey: "calcMaxLevel")
         let gridMaxLevel = userDefault.integer(forKey: "gridMaxLevel")
         let totalExp = userDefault.integer(forKey: "totalExp")
-        let sideLength:Double = 50 + 26 * log(Double(( totalExp + 50 ) / 50))
+        //ついでなのでビューも更新する 本来切り出す
+        statusLabel.text = String(format: NSLocalizedString("root_statusLabel", comment: ""), calcMaxLevel, gridMaxLevel, totalExp)
         
-        return String(format: "%d, %d, %@", calcMaxLevel, sideLength, Constraint.gridGameArchivementColors[gridMaxLevel])
+        let sideLength:Double = 50 + 26 * log(Double(( totalExp + 50 ) / 50))
+        return String(format: "init(%d, %.0f, 0x%@)", calcMaxLevel, sideLength, Constraint.gridGameArchivementColors[gridMaxLevel])
     }
 }

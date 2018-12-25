@@ -17,6 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // スリープ無効
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        
+        // チュートリアルスキップ
+        let isTutorialSkipped: Bool = UserDefaults.standard.bool(forKey: "isTutorialSkipped")
+        if isTutorialSkipped {
+            let RVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RootView") as! RootViewController
+            self.window?.rootViewController = RVC
+        }else{
+            // implement register view controller
+            let TVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TutorialView") as! TutorialViewController
+            self.window?.rootViewController = TVC
+        }
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

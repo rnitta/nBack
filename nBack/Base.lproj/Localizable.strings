@@ -6,7 +6,21 @@
   Copyright © 2018 amagrammer. All rights reserved.
 */
 
+"tutorial_0title" = "Welcome!";
+"tutorial_0desc" = "nBackTrainer helps you\n to increase your working memory.";
+"tutorial_1title" = "2-Type of Games";
+"tutorial_1desc" = "Calculation Game and Grid Game are available.\nPlaying both is desireble to effectively train your working memory.";
+"tutorial_2title" = "Grow the Polygon";
+"tutorial_2desc" = "Play much and grow your brain and the polygon";
+
 "root_levelIndicator" = "Level: n =";
+"root_statusLabel" = "Status: %d-%d-%d";
+
+"root_spot_poly" = "This Polygon is Your Brain.";
+"root_spot_selectLevel" = "Select Game Level.";
+"root_spot_startCalc" = "and Start Calculation Game.";
+"root_spot_startGrid" = "or Start Grid Game.";
+
 "root_calcGameNewRecordTitle" = "New Record in Calc";
 "root_calcGameNewRecordMessage" = "Perfect with Level: %d.\nPolygon has growed.";
 "root_gridGameNewRecordTitle" = "New Record in Grid";

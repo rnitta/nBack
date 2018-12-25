@@ -250,6 +250,8 @@ extension GridGameViewController {
                 userDefaults.set(true, forKey: "isGridMaxLevelUpdated")
             }
         }
+        
+        increaseTotalExp(level: levelN, miss: missCount!)
     }
 }
 

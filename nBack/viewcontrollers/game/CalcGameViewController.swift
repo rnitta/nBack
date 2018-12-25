@@ -142,6 +142,7 @@ extension CalcGameViewController {
                 userDefaults.set(true, forKey: "isCalcMaxLevelUpdated")
             }
         }
+        increaseTotalExp(level: levelN!, miss: missCount!)
     }
 }
 
