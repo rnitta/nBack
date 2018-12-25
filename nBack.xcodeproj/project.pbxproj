@@ -12,7 +12,6 @@
 		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
 		8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AE21D1A4DD00724303 /* Constraint.swift */; };
 		875182B721D1EAE700D2C349 /* TotalExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875182B621D1EAE700D2C349 /* TotalExp.swift */; };
-		875182D421D229AC00D2C349 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 875182D321D229AB00D2C349 /* GoogleService-Info.plist */; };
 		87578D9421CB320800F76F54 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87578D9321CB320800F76F54 /* LaunchView.swift */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
@@ -30,6 +29,7 @@
 		87BC506B21C32467000B3134 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC506A21C32467000B3134 /* RootViewController.swift */; };
 		87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */; };
 		87BC50A221C3E225000B3134 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC50A121C3E225000B3134 /* UIColor.swift */; };
+		87D443D821D234590013BB34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87D443D721D234590013BB34 /* GoogleService-Info.plist */; };
 		87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F7B50621CE4A3D00AA18FF /* NPad.swift */; };
 		87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B51C21CFA4D500AA18FF /* Localizable.strings */; };
 		87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F7B51F21CFA4E200AA18FF /* Localizable.strings */; };
@@ -50,7 +50,6 @@
 		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		8724B4AE21D1A4DD00724303 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		875182B621D1EAE700D2C349 /* TotalExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalExp.swift; sourceTree = "<group>"; };
-		875182D321D229AB00D2C349 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87578D9321CB320800F76F54 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 		87BC506A21C32467000B3134 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		87BC50A121C3E225000B3134 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		87D443D721D234590013BB34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		87F7B50621CE4A3D00AA18FF /* NPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPad.swift; sourceTree = "<group>"; };
 		87F7B51D21CFA4D500AA18FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Localizable.strings; sourceTree = "<group>"; };
 		87F7B52021CFA4E200AA18FF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Localizable.strings; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 				87BC505421C3230E000B3134 /* Assets.xcassets */,
 				87BC505621C3230E000B3134 /* LaunchScreen.storyboard */,
 				87BC505921C3230E000B3134 /* Info.plist */,
-				875182D321D229AB00D2C349 /* GoogleService-Info.plist */,
+				87D443D721D234590013BB34 /* GoogleService-Info.plist */,
 			);
 			path = nBack;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				87F7B53C21D0B31300AA18FF /* clap.json in Resources */,
 				87BC506621C323B0000B3134 /* three.min.js in Resources */,
 				87F7B53421D00C2500AA18FF /* correct.json in Resources */,
-				875182D421D229AC00D2C349 /* GoogleService-Info.plist in Resources */,
+				87D443D821D234590013BB34 /* GoogleService-Info.plist in Resources */,
 				87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */,
 				87BC505521C3230E000B3134 /* Assets.xcassets in Resources */,
 				87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */,
