@@ -19,6 +19,9 @@ target 'nBack' do
   pod 'NumPad'
   pod 'lottie-ios'
   pod 'Surge', '~> 2.0.0'
+  pod 'Instructions', '~> 1.2.2'
+  pod 'Firebase/Core'
+  pod 'Fabric', '~> 1.9.0'
+  pod 'Crashlytics', '~> 3.12.0'
 end
-
 
