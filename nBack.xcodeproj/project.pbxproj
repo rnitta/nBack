@@ -10,6 +10,7 @@
 		8724B4A921D108A800724303 /* calcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4A821D108A800724303 /* calcData.swift */; };
 		8724B4AB21D12B0C00724303 /* gridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AA21D12B0C00724303 /* gridData.swift */; };
 		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
+		8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AE21D1A4DD00724303 /* Constraint.swift */; };
 		87578D9421CB320800F76F54 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87578D9321CB320800F76F54 /* LaunchView.swift */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
@@ -46,6 +47,7 @@
 		8724B4A821D108A800724303 /* calcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcData.swift; sourceTree = "<group>"; };
 		8724B4AA21D12B0C00724303 /* gridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridData.swift; sourceTree = "<group>"; };
 		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
+		8724B4AE21D1A4DD00724303 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		87578D9321CB320800F76F54 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				87B4FD9521C4F8D300956562 /* UIButton.swift */,
 				87F7B50621CE4A3D00AA18FF /* NPad.swift */,
 				8724B4AC21D14FCA00724303 /* GameStatus.swift */,
+				8724B4AE21D1A4DD00724303 /* Constraint.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Surge/Surge.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
@@ -397,6 +401,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Surge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
@@ -438,6 +443,7 @@
 			files = (
 				87BC504E21C3230D000B3134 /* AppDelegate.swift in Sources */,
 				87B4FD9C21C526BE00956562 /* CalcGameViewController.swift in Sources */,
+				8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */,
 				87B4FD9121C40D9100956562 /* UIImage.swift in Sources */,
 				8724B4A921D108A800724303 /* calcData.swift in Sources */,
 				87BC50A221C3E225000B3134 /* UIColor.swift in Sources */,

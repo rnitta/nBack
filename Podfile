@@ -18,6 +18,7 @@ target 'nBack' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'NumPad'
   pod 'lottie-ios'
+  pod 'Surge', '~> 2.0.0'
 end
 
 

@@ -31,6 +31,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - Surge (2.0.0)
   - SVGKit (2.1.0):
     - CocoaLumberjack (~> 3.0)
 
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - RealmSwift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
+  - Surge (~> 2.0.0)
   - SVGKit
 
 SPEC REPOS:
@@ -66,6 +68,7 @@ SPEC REPOS:
     - RxAtomic
     - RxCocoa
     - RxSwift
+    - Surge
     - SVGKit
 
 SPEC CHECKSUMS:
@@ -85,8 +88,9 @@ SPEC CHECKSUMS:
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  Surge: 1f0286bc5f0fe4283f3455479895bf85c7ef7760
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
 
-PODFILE CHECKSUM: 131c9690337895f909355119bb5059c4c137b59b
+PODFILE CHECKSUM: 9402b5a44d9edb35e95e0edc9bccb3613cfbc6af
 
 COCOAPODS: 1.5.3

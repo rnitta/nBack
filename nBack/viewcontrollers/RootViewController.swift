@@ -11,6 +11,7 @@ import WebKit
 import SVGKit
 import fluid_slider
 import CDAlertView
+import Surge
 
 class RootViewController: UIViewController {
 
@@ -57,6 +58,7 @@ class RootViewController: UIViewController {
             alert.show()
             
             userDefaults.set(false, forKey: "isCalcMaxLevelUpdated")
+            polyWebView.evaluateJavaScript(execJSString(), completionHandler: nil)
         }
         
         let gridMaxLevel:Int = userDefaults.integer(forKey: "gridMaxLevel")
@@ -68,6 +70,7 @@ class RootViewController: UIViewController {
             alert.show()
             
             userDefaults.set(false, forKey: "isGridMaxLevelUpdated")
+            polyWebView.evaluateJavaScript(execJSString(), completionHandler: nil)
         }
     }
     
@@ -149,11 +152,18 @@ class RootViewController: UIViewController {
 
 extension RootViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript(execJSString(), completionHandler: nil)
+    }
+}
+
+extension RootViewController {
+    private func execJSString() -> String {
+        let userDefault = UserDefaults.standard
+        let calcMaxLevel = userDefault.integer(forKey: "calcMaxLevel")
+        let gridMaxLevel = userDefault.integer(forKey: "gridMaxLevel")
+        let totalExp = userDefault.integer(forKey: "totalExp")
+        let sideLength:Double = 50 + 26 * log(Double(( totalExp + 50 ) / 50))
         
-        let execJS: String = "init(4, 100, 0x668db6);"
-        webView.evaluateJavaScript(execJS, completionHandler: { (object, error) -> Void in
-            // jsの関数実行結果
-            // js側で戻り値を返すこともできる
-        })
+        return String(format: "%d, %d, %@", calcMaxLevel, sideLength, Constraint.gridGameArchivementColors[gridMaxLevel])
     }
 }
