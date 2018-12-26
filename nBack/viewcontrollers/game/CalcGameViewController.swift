@@ -13,6 +13,7 @@ import NumPad
 import Material
 import SVGKit
 import RealmSwift
+import Lottie
 
 class CalcGameViewController: UIViewController {
     var levelN: Int?

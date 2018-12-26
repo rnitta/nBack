@@ -13,6 +13,7 @@ import NumPad
 import Material
 import SVGKit
 import RealmSwift
+import Lottie
 
 class GridGameViewController: UIViewController {
     var levelN: Int!
@@ -200,7 +201,6 @@ extension GridGameViewController {
             self.completionTimeElapsedLabel.isHidden = false
             self.completionMissCountLabel.isHidden = false
             self.completionCloseButton.isHidden = false
-            
         })
         
     }

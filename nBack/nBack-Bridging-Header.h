@@ -9,6 +9,4 @@
 #ifndef nBack_Bridging_Header_h
 #define nBack_Bridging_Header_h
 
-#import <Lottie/Lottie.h>
-
 #endif /* nBack_Bridging_Header_h */

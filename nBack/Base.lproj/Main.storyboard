@@ -238,17 +238,34 @@
             </objects>
             <point key="canvasLocation" x="868" y="129.98500749625188"/>
         </scene>
-        <!--View Controller-->
+        <!--Side Menu View Controller-->
         <scene sceneID="c6Q-Mm-SYZ">
             <objects>
-                <viewController id="4dy-kc-83A" sceneMemberID="viewController">
+                <viewController id="4dy-kc-83A" customClass="SideMenuViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJ6-FZ-YgR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OP1-gR-chN" customClass="LOTAnimationView">
+                                <rect key="frame" x="37.5" y="441" width="300" height="226"/>
+                                <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OP1-gR-chN" secondAttribute="height" multiplier="248:187" id="CBl-hp-49n"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27371412519999999" green="0.60021603109999999" blue="0.57647162679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OP1-gR-chN" firstAttribute="width" secondItem="cJ6-FZ-YgR" secondAttribute="width" multiplier="0.8" id="3iy-GF-qNG"/>
+                            <constraint firstItem="OP1-gR-chN" firstAttribute="bottom" secondItem="JNb-wO-eNb" secondAttribute="bottom" id="fY5-Br-MwW"/>
+                            <constraint firstItem="OP1-gR-chN" firstAttribute="centerX" secondItem="cJ6-FZ-YgR" secondAttribute="centerX" id="hGb-vT-U49"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JNb-wO-eNb"/>
                     </view>
                     <navigationItem key="navigationItem" id="ux3-9o-jQJ"/>
+                    <connections>
+                        <outlet property="vainAnimationView" destination="OP1-gR-chN" id="9kZ-eH-Ppt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCF-xX-axs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

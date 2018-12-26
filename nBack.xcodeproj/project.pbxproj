@@ -20,6 +20,8 @@
 		876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308321D2F37C00CC3BC7 /* gear_icon.svg */; };
 		876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */; };
 		876B308F21D3D1E500CC3BC7 /* hamburger_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */; };
+		876B309521D3D55200CC3BC7 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */; };
+		876B309721D3D7F100CC3BC7 /* kujira.json in Resources */ = {isa = PBXBuildFile; fileRef = 876B309621D3D7F100CC3BC7 /* kujira.json */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
 		87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD9221C49B1900956562 /* grid_icon.svg */; };
@@ -65,6 +67,8 @@
 		876B308321D2F37C00CC3BC7 /* gear_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gear_icon.svg; sourceTree = "<group>"; };
 		876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gamepad_icon.svg; sourceTree = "<group>"; };
 		876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hamburger_icon.svg; sourceTree = "<group>"; };
+		876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		876B309621D3D7F100CC3BC7 /* kujira.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kujira.json; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		87B4FD9221C49B1900956562 /* grid_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid_icon.svg; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				87B4FD9A21C5268C00956562 /* game */,
 				87BC506A21C32467000B3134 /* RootViewController.swift */,
 				87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */,
+				876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				87F7B53B21D0B31300AA18FF /* clap.json */,
 				87F7B52F21CFFB0000AA18FF /* dottedLoading.json */,
 				87F7B53721D0AE5D00AA18FF /* fabulousLike.json */,
+				876B309621D3D7F100CC3BC7 /* kujira.json */,
 				87F7B53321D00C2500AA18FF /* correct.json */,
 				87F7B53121D00C0100AA18FF /* wrong.json */,
 				87F7B52721CFE7A600AA18FF /* materialCountDown.json */,
@@ -373,6 +379,7 @@
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
 				87BC506921C323B0000B3134 /* poly.html in Resources */,
 				87F7B53C21D0B31300AA18FF /* clap.json in Resources */,
+				876B309721D3D7F100CC3BC7 /* kujira.json in Resources */,
 				87BC506621C323B0000B3134 /* three.min.js in Resources */,
 				87F7B53421D00C2500AA18FF /* correct.json in Resources */,
 				87D443D821D234590013BB34 /* GoogleService-Info.plist in Resources */,
@@ -503,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876B309521D3D55200CC3BC7 /* SideMenuViewController.swift in Sources */,
 				87BC504E21C3230D000B3134 /* AppDelegate.swift in Sources */,
 				87B4FD9C21C526BE00956562 /* CalcGameViewController.swift in Sources */,
 				8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */,
