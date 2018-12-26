@@ -108,6 +108,10 @@ extension GridGameViewController {
             switch true {
             case turn <= levelN:
                 status = .memorize
+            case levelN + 1 == turn:
+                //　本当はここにあるべきじゃないけどここで開始判定
+                status = .answer
+                self.gameStartTime = Date() //時間計測開始
             case levelN < turn && turn <= levelN + 9:
                 status = .answer
             case levelN + 9 < turn && turn <= levelN * 2 + 9:

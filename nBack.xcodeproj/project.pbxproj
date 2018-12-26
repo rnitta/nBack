@@ -13,6 +13,12 @@
 		8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AE21D1A4DD00724303 /* Constraint.swift */; };
 		875182B721D1EAE700D2C349 /* TotalExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875182B621D1EAE700D2C349 /* TotalExp.swift */; };
 		87578D9421CB320800F76F54 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87578D9321CB320800F76F54 /* LaunchView.swift */; };
+		876B307E21D2EE4F00CC3BC7 /* poly_image.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B307B21D2EE4D00CC3BC7 /* poly_image.svg */; };
+		876B307F21D2EE4F00CC3BC7 /* thinking_image.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */; };
+		876B308121D2F02C00CC3BC7 /* game_image.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308021D2F02C00CC3BC7 /* game_image.svg */; };
+		876B308521D2F37E00CC3BC7 /* ruby_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308221D2F37C00CC3BC7 /* ruby_icon.svg */; };
+		876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308321D2F37C00CC3BC7 /* gear_icon.svg */; };
+		876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
 		87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD9221C49B1900956562 /* grid_icon.svg */; };
@@ -51,6 +57,12 @@
 		8724B4AE21D1A4DD00724303 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		875182B621D1EAE700D2C349 /* TotalExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalExp.swift; sourceTree = "<group>"; };
 		87578D9321CB320800F76F54 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		876B307B21D2EE4D00CC3BC7 /* poly_image.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = poly_image.svg; sourceTree = "<group>"; };
+		876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = thinking_image.svg; sourceTree = "<group>"; };
+		876B308021D2F02C00CC3BC7 /* game_image.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = game_image.svg; sourceTree = "<group>"; };
+		876B308221D2F37C00CC3BC7 /* ruby_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ruby_icon.svg; sourceTree = "<group>"; };
+		876B308321D2F37C00CC3BC7 /* gear_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gear_icon.svg; sourceTree = "<group>"; };
+		876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gamepad_icon.svg; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		87B4FD9221C49B1900956562 /* grid_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid_icon.svg; sourceTree = "<group>"; };
@@ -134,9 +146,15 @@
 		87B4FD8D21C40AD400956562 /* svg */ = {
 			isa = PBXGroup;
 			children = (
+				876B307B21D2EE4D00CC3BC7 /* poly_image.svg */,
+				876B308021D2F02C00CC3BC7 /* game_image.svg */,
+				876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */,
 				87F7B53D21D0D67F00AA18FF /* closeX_icon.svg */,
 				87B4FD8E21C40ADE00956562 /* calc_icon.svg */,
 				87B4FD9221C49B1900956562 /* grid_icon.svg */,
+				876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */,
+				876B308321D2F37C00CC3BC7 /* gear_icon.svg */,
+				876B308221D2F37C00CC3BC7 /* ruby_icon.svg */,
 			);
 			path = svg;
 			sourceTree = "<group>";
@@ -340,10 +358,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */,
 				87F7B52821CFE7A600AA18FF /* materialCountDown.json in Resources */,
 				87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */,
 				87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */,
 				87F7B53E21D0D67F00AA18FF /* closeX_icon.svg in Resources */,
+				876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */,
 				87BC506721C323B0000B3134 /* index.js in Resources */,
 				87F7B53021CFFB0000AA18FF /* dottedLoading.json in Resources */,
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
@@ -352,11 +372,15 @@
 				87BC506621C323B0000B3134 /* three.min.js in Resources */,
 				87F7B53421D00C2500AA18FF /* correct.json in Resources */,
 				87D443D821D234590013BB34 /* GoogleService-Info.plist in Resources */,
+				876B308121D2F02C00CC3BC7 /* game_image.svg in Resources */,
 				87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */,
+				876B307F21D2EE4F00CC3BC7 /* thinking_image.svg in Resources */,
 				87BC505521C3230E000B3134 /* Assets.xcassets in Resources */,
 				87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */,
+				876B308521D2F37E00CC3BC7 /* ruby_icon.svg in Resources */,
 				87F7B53221D00C0100AA18FF /* wrong.json in Resources */,
 				87BC505321C3230D000B3134 /* Main.storyboard in Resources */,
+				876B307E21D2EE4F00CC3BC7 /* poly_image.svg in Resources */,
 				87F7B53821D0AE5D00AA18FF /* fabulousLike.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

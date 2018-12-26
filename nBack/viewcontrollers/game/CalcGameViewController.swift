@@ -113,7 +113,6 @@ extension CalcGameViewController {
                     self.countDownAnimationView.pause()
                     self.countDownView.removeFromSuperview()
                     self.startMemorizeTurn()
-                    self.gameStartTime = Date() //時間計測開始
                 }
             }
         }
@@ -172,6 +171,10 @@ extension CalcGameViewController {
             switch true {
             case turn <= level:
                 status = .memorize
+            case level + 1 == turn:
+                //　本当はここにあるべきじゃないけどここで開始判定
+                status = .answer
+                self.gameStartTime = Date() //時間計測開始
             case level < turn && turn <= level + 9:
                 status = .answer
             case level + 9 < turn && turn <= level * 2 + 9:

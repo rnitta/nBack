@@ -7,11 +7,11 @@
 */
 
 "tutorial_0title" = "ようこそ！";
-"tutorial_0desc" = "このアプリは、あなたのワーキングメモリを鍛えてくれます。";
-"tutorial_1title" = "2タイプのゲーム";
-"tutorial_1desc" = "計算ゲームとグリッドゲームがあります。\n両方をプレイすることでより効率的に鍛えられます。";
-"tutorial_2title" = "多面体を鍛えましょう";
-"tutorial_2desc" = "たくさんプレイするとあなたの脳と多面体が育ちます！";
+"tutorial_0desc" = "このアプリはあなたの\nワーキングメモリ\nを鍛えてくれます。";
+"tutorial_1title" = "2種類のゲーム";
+"tutorial_1desc" = "計算ゲームとグリッドゲーム\nがあります。\n両方をプレイすることで\nより効率的に鍛えられます。";
+"tutorial_2title" = "多面体を育てる";
+"tutorial_2desc" = "たくさんプレイすると\nあなたの脳と多面体が育ちます！";
 
 
 "root_levelIndicator" = "レベル: n =";
@@ -38,5 +38,5 @@
 "game_completion_congratPerfect" = "完璧!!";
 "game_completion_congratDone" = "完了!";
 "game_completion_level" = "レベル: %d";
-"game_completion_timeElapsed" = "経過時間: %.1f s";
+"game_completion_timeElapsed" = "経過時間: %.1f 秒";
 "game_completion_missCount" = "ミス数: %d";

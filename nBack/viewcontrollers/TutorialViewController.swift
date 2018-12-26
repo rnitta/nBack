@@ -8,6 +8,7 @@
 
 import UIKit
 import paper_onboarding
+import SVGKit
 
 // FIXME: 一度表示したら二度と出ないようにする app delegateで?
 class TutorialViewController: UIViewController {
@@ -53,34 +54,40 @@ extension TutorialViewController: PaperOnboardingDataSource {
     }
 
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
+        let infoSVGs:[SVGKImage] = [SVGKImage(named: "thinking_image.svg"), SVGKImage(named: "game_image.svg"), SVGKImage(named: "poly_image.svg")]
+        for svg in infoSVGs { svg.size = CGSize(width: 400, height: 400) }
+//        let iconSVGs:[SVGKImage] = [SVGKImage(named: "gear_icon.svg"), SVGKImage(named: "gamepad_icon.svg"), SVGKImage(named: "ruby_icon.svg")]
+//        for svg in iconSVGs { svg.size = CGSize(width: 10, height: 10) }
+        let titleSize: CGFloat = 26
+        let descSize: CGFloat = 18
         return [
-            OnboardingItemInfo(informationImage: UIImage(),
+            OnboardingItemInfo(informationImage: infoSVGs[0].uiImage,
                                title: NSLocalizedString("tutorial_0title", comment: ""),
                                description: NSLocalizedString("tutorial_0desc", comment: ""),
                                pageIcon: UIImage(),
                                color: UIColor.Tutorial.background0,
                                titleColor: UIColor.Tutorial.title,
                                descriptionColor: UIColor.Tutorial.desc,
-                               titleFont: UIFont(name: "HiraginoSans-W6", size: CGFloat(20))!,
-                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: CGFloat(14))!),
-            OnboardingItemInfo(informationImage: UIImage(),
+                               titleFont: UIFont(name: "HiraginoSans-W6", size: titleSize)!,
+                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: descSize)!),
+            OnboardingItemInfo(informationImage: infoSVGs[1].uiImage,
                                title: NSLocalizedString("tutorial_1title", comment: ""),
                                description: NSLocalizedString("tutorial_1desc", comment: ""),
                                pageIcon: UIImage(),
                                color: UIColor.Tutorial.background1,
                                titleColor: UIColor.Tutorial.title,
                                descriptionColor: UIColor.Tutorial.desc,
-                               titleFont: UIFont(name: "HiraginoSans-W6", size: CGFloat(20))!,
-                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: CGFloat(14))!),
-            OnboardingItemInfo(informationImage: UIImage(),
+                               titleFont: UIFont(name: "HiraginoSans-W6", size: titleSize)!,
+                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: descSize)!),
+            OnboardingItemInfo(informationImage: infoSVGs[2].uiImage,
                                title: NSLocalizedString("tutorial_2title", comment: ""),
                                description: NSLocalizedString("tutorial_2desc", comment: ""),
                                pageIcon: UIImage(),
                                color: UIColor.Tutorial.background2,
                                titleColor: UIColor.Tutorial.title,
                                descriptionColor: UIColor.Tutorial.desc,
-                               titleFont: UIFont(name: "HiraginoSans-W6", size: CGFloat(20))!,
-                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: CGFloat(14))!)
+                               titleFont: UIFont(name: "HiraginoSans-W6", size: titleSize)!,
+                               descriptionFont: UIFont(name: "HiraginoSans-W3", size: descSize)!)
             ][index]
     }
 }
@@ -101,8 +108,6 @@ extension TutorialViewController: PaperOnboardingDelegate {
     }
     
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
-        //item.titleLabel?.backgroundColor = .redColor()
-        //item.descriptionLabel?.backgroundColor = .redColor()
-        //item.imageView = ...
+
     }
 }
