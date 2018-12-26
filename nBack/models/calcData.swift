@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+// なんで頭小文字にしたんだろう
 class calcData: Object {
     @objc dynamic var id:String = UUID().uuidString
     @objc dynamic var miss:Int = 0 // ミス数

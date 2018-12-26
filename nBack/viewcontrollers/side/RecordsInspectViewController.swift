@@ -14,13 +14,23 @@ import RxCocoa
 import RealmSwift
 
 class RecordsInspectViewController: UIViewController {
-
+    let realm = try! Realm()
+    var calcRecords:Results<calcData>!
+    var gridRecords:Results<gridData>!
     let disposeBag:DisposeBag = DisposeBag()
+    var segmentIndex:Int = 0
     @IBOutlet var segmentView: BetterSegmentedControl!
     @IBOutlet var closeButton: UIButton!
+    @IBOutlet var recordListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        calcRecords = realm.objects(calcData.self)
+        gridRecords = realm.objects(gridData.self)
+        recordListTableView.delegate = self
+        recordListTableView.dataSource = self
+        recordListTableView.register(UINib(nibName: "GameRecordCell", bundle: nil), forCellReuseIdentifier: "GameRecordCell")
 
         setupSegmentView()
         setupCloseButton()
@@ -49,7 +59,73 @@ class RecordsInspectViewController: UIViewController {
     }
     // セグメントの切り替えハンドラ
     @IBAction func segmentValueChanged(_ sender: BetterSegmentedControl) {
-        print(sender.index)
+        segmentIndex = Int(sender.index)
+        recordListTableView.reloadData()
     }
+}
 
+// テーブル系切り出す
+extension RecordsInspectViewController: UITableViewDelegate, UITableViewDataSource {
+    // ヘッダの高さ
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 40
+//    }
+    
+    // ヘッダ設定
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerNibName) {
+//            return headerView
+//        }
+//        return nil
+//    }
+    
+     //セルの数
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if segmentIndex == 0 {
+            return calcRecords.count
+        } else {
+            return gridRecords.count
+        }
+    }
+    
+    // 各セルのテキスト
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameRecordCell")! as! GameRecordCell
+        if segmentIndex == 0 {
+            let record = calcRecords[indexPath.item]
+            cell.dateLabel.text = record.timeStamp.toYMDHM()
+            cell.levelScrimView.layer.cornerRadius = cell.levelScrimView.frame.width / 2.0
+            cell.levelLabel.text = String(format: "%d", record.level)
+            cell.elapsedTimeLabel.text = String(format: "%.1fs", record.elapsedTime)
+            cell.missCountLabel.text = String(format: "%d", record.miss)
+            if record.miss == 0 {
+                cell.perfectIndicatorImageView.isHidden = false
+                if let svg = SVGKImage(named: "check_icon.svg") {
+                    svg.size = CGSize(width: 20, height: 20)
+                    cell.perfectIndicatorImageView.image = svg.uiImage
+                }
+            } else {
+                cell.perfectIndicatorImageView.isHidden = true
+            }
+            
+        } else {
+            let record = gridRecords[indexPath.item]
+            cell.dateLabel.text = record.timeStamp.toYMDHM()
+            cell.levelScrimView.layer.cornerRadius = cell.levelScrimView.frame.width / 2.0
+            cell.levelLabel.text = String(format: "%d", record.level)
+            cell.elapsedTimeLabel.text = String(format: "%.1fs", record.elapsedTime)
+            cell.missCountLabel.text = String(format: "%d", record.miss)
+            if record.miss == 0 {
+                cell.perfectIndicatorImageView.isHidden = false
+                if let svg = SVGKImage(named: "check_icon.svg") {
+                    svg.size = CGSize(width: 20, height: 20)
+                    cell.perfectIndicatorImageView.image = svg.uiImage
+                }
+            } else {
+                cell.perfectIndicatorImageView.isHidden = true
+            }
+            
+        }
+        return cell as GameRecordCell
+    }
 }

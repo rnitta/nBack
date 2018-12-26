@@ -12,7 +12,6 @@
 		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
 		8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AE21D1A4DD00724303 /* Constraint.swift */; };
 		875182B721D1EAE700D2C349 /* TotalExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875182B621D1EAE700D2C349 /* TotalExp.swift */; };
-		87578D9421CB320800F76F54 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87578D9321CB320800F76F54 /* LaunchView.swift */; };
 		876B307E21D2EE4F00CC3BC7 /* poly_image.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B307B21D2EE4D00CC3BC7 /* poly_image.svg */; };
 		876B307F21D2EE4F00CC3BC7 /* thinking_image.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */; };
 		876B308121D2F02C00CC3BC7 /* game_image.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308021D2F02C00CC3BC7 /* game_image.svg */; };
@@ -23,6 +22,10 @@
 		876B309521D3D55200CC3BC7 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */; };
 		876B309721D3D7F100CC3BC7 /* kujira.json in Resources */ = {isa = PBXBuildFile; fileRef = 876B309621D3D7F100CC3BC7 /* kujira.json */; };
 		876B309A21D3E89A00CC3BC7 /* RecordsInspectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */; };
+		876B309D21D3F65000CC3BC7 /* GameRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309B21D3F65000CC3BC7 /* GameRecordCell.swift */; };
+		876B309E21D3F65000CC3BC7 /* GameRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876B309C21D3F65000CC3BC7 /* GameRecordCell.xib */; };
+		876B30A021D3FA4C00CC3BC7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309F21D3FA4C00CC3BC7 /* Date.swift */; };
+		876B30A221D3FC8900CC3BC7 /* check_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B30A121D3FC8900CC3BC7 /* check_icon.svg */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
 		87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD9221C49B1900956562 /* grid_icon.svg */; };
@@ -60,7 +63,6 @@
 		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		8724B4AE21D1A4DD00724303 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		875182B621D1EAE700D2C349 /* TotalExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalExp.swift; sourceTree = "<group>"; };
-		87578D9321CB320800F76F54 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		876B307B21D2EE4D00CC3BC7 /* poly_image.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = poly_image.svg; sourceTree = "<group>"; };
 		876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = thinking_image.svg; sourceTree = "<group>"; };
 		876B308021D2F02C00CC3BC7 /* game_image.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = game_image.svg; sourceTree = "<group>"; };
@@ -71,6 +73,10 @@
 		876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		876B309621D3D7F100CC3BC7 /* kujira.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kujira.json; sourceTree = "<group>"; };
 		876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsInspectViewController.swift; sourceTree = "<group>"; };
+		876B309B21D3F65000CC3BC7 /* GameRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecordCell.swift; sourceTree = "<group>"; };
+		876B309C21D3F65000CC3BC7 /* GameRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRecordCell.xib; sourceTree = "<group>"; };
+		876B309F21D3FA4C00CC3BC7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		876B30A121D3FC8900CC3BC7 /* check_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = check_icon.svg; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		87B4FD9221C49B1900956562 /* grid_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid_icon.svg; sourceTree = "<group>"; };
@@ -138,7 +144,8 @@
 		87578D9221CB31E300F76F54 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				87578D9321CB320800F76F54 /* LaunchView.swift */,
+				876B309B21D3F65000CC3BC7 /* GameRecordCell.swift */,
+				876B309C21D3F65000CC3BC7 /* GameRecordCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 				876B307B21D2EE4D00CC3BC7 /* poly_image.svg */,
 				876B308021D2F02C00CC3BC7 /* game_image.svg */,
 				876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */,
+				876B30A121D3FC8900CC3BC7 /* check_icon.svg */,
 				876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */,
 				87F7B53D21D0D67F00AA18FF /* closeX_icon.svg */,
 				87B4FD8E21C40ADE00956562 /* calc_icon.svg */,
@@ -274,6 +282,7 @@
 				8724B4AC21D14FCA00724303 /* GameStatus.swift */,
 				8724B4AE21D1A4DD00724303 /* Constraint.swift */,
 				875182B621D1EAE700D2C349 /* TotalExp.swift */,
+				876B309F21D3FA4C00CC3BC7 /* Date.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -378,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876B309E21D3F65000CC3BC7 /* GameRecordCell.xib in Resources */,
 				876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */,
 				87F7B52821CFE7A600AA18FF /* materialCountDown.json in Resources */,
 				87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */,
@@ -387,6 +397,7 @@
 				876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */,
 				87BC506721C323B0000B3134 /* index.js in Resources */,
 				87F7B53021CFFB0000AA18FF /* dottedLoading.json in Resources */,
+				876B30A221D3FC8900CC3BC7 /* check_icon.svg in Resources */,
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
 				87BC506921C323B0000B3134 /* poly.html in Resources */,
 				87F7B53C21D0B31300AA18FF /* clap.json in Resources */,
@@ -530,16 +541,17 @@
 				87B4FD9121C40D9100956562 /* UIImage.swift in Sources */,
 				8724B4A921D108A800724303 /* calcData.swift in Sources */,
 				87BC50A221C3E225000B3134 /* UIColor.swift in Sources */,
+				876B30A021D3FA4C00CC3BC7 /* Date.swift in Sources */,
 				87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */,
 				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,
 				875182B721D1EAE700D2C349 /* TotalExp.swift in Sources */,
 				87B4FD9E21C526D400956562 /* GridGameViewController.swift in Sources */,
-				87578D9421CB320800F76F54 /* LaunchView.swift in Sources */,
 				8724B4AB21D12B0C00724303 /* gridData.swift in Sources */,
 				8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */,
 				876B309A21D3E89A00CC3BC7 /* RecordsInspectViewController.swift in Sources */,
 				87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */,
 				87B4FD9621C4F8D300956562 /* UIButton.swift in Sources */,
+				876B309D21D3F65000CC3BC7 /* GameRecordCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
