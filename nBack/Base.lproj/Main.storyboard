@@ -167,11 +167,28 @@
                                     <constraint firstAttribute="width" constant="150" id="abP-Nz-7oN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
-                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.93695038559999999" green="0.93007671830000005" blue="0.88234686849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vG-HZ-xcT">
+                                <rect key="frame" x="10" y="30" width="44" height="44"/>
+                                <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="c5e-Vw-64s"/>
+                                    <constraint firstAttribute="height" constant="44" id="veH-fv-3yX"/>
+                                </constraints>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Aoh-lH-zvh" kind="presentation" identifier="showSideMenuSegue" id="e4R-R8-Yx4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.26379683613777161" blue="0.26379683613777161" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dcy-u5-yOH" firstAttribute="bottom" secondItem="X36-Vf-AfO" secondAttribute="bottom" constant="30" id="1JL-vi-Bn5"/>
                             <constraint firstItem="v5C-Oa-t3p" firstAttribute="centerX" secondItem="o0R-Ib-6xU" secondAttribute="centerX" id="29e-Od-lYA"/>
@@ -180,8 +197,10 @@
                             <constraint firstItem="5lc-vS-hpd" firstAttribute="trailing" secondItem="dcy-u5-yOH" secondAttribute="trailing" id="Ggx-0L-BX8"/>
                             <constraint firstItem="XoH-hj-FtF" firstAttribute="top" secondItem="0OZ-Nt-GuM" secondAttribute="bottom" constant="10" id="KN2-gl-MgI"/>
                             <constraint firstItem="X36-Vf-AfO" firstAttribute="top" secondItem="XoH-hj-FtF" secondAttribute="bottom" constant="30" id="OL1-dK-WqF"/>
+                            <constraint firstItem="2vG-HZ-xcT" firstAttribute="leading" secondItem="dcy-u5-yOH" secondAttribute="leading" constant="10" id="S2W-gT-jJd"/>
                             <constraint firstItem="v5C-Oa-t3p" firstAttribute="centerY" secondItem="X36-Vf-AfO" secondAttribute="centerY" id="S7t-jh-o4r"/>
                             <constraint firstItem="5lc-vS-hpd" firstAttribute="bottom" secondItem="JQL-Ez-TJu" secondAttribute="bottom" constant="16" id="Twk-CQ-adm"/>
+                            <constraint firstItem="2vG-HZ-xcT" firstAttribute="top" secondItem="dcy-u5-yOH" secondAttribute="top" constant="10" id="cvq-4c-t2N"/>
                             <constraint firstItem="JQL-Ez-TJu" firstAttribute="trailing" secondItem="dcy-u5-yOH" secondAttribute="trailing" constant="-20" id="dkA-T6-8ES"/>
                             <constraint firstItem="X36-Vf-AfO" firstAttribute="leading" secondItem="dcy-u5-yOH" secondAttribute="leading" constant="30" id="hAv-du-Xjd"/>
                             <constraint firstItem="5lc-vS-hpd" firstAttribute="width" secondItem="X36-Vf-AfO" secondAttribute="width" multiplier="4" id="hBv-WH-QH1"/>
@@ -195,9 +214,13 @@
                             <constraint firstItem="5lc-vS-hpd" firstAttribute="leading" secondItem="dcy-u5-yOH" secondAttribute="leading" id="xM6-cy-t5d"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dcy-u5-yOH"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Thc-RN-v2L" appends="YES" id="msk-gq-Cf9"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="gridGameButton" destination="UeN-5O-LsY" id="r9g-Ym-sxC"/>
+                        <outlet property="hamburgerMenuButton" destination="2vG-HZ-xcT" id="RHo-e0-Dpd"/>
                         <outlet property="levellabel" destination="0OZ-Nt-GuM" id="BUa-uJ-zdN"/>
                         <outlet property="nSlider" destination="XoH-hj-FtF" id="AV3-YC-Z91"/>
                         <outlet property="numberGameButton" destination="X36-Vf-AfO" id="p5d-cG-acV"/>
@@ -206,8 +229,30 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4um-59-EFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Thc-RN-v2L">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="leftEdgePanned:" destination="aId-nK-eHv" id="hwE-oC-urW"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="868" y="129.98500749625188"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c6Q-Mm-SYZ">
+            <objects>
+                <viewController id="4dy-kc-83A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cJ6-FZ-YgR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JNb-wO-eNb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ux3-9o-jQJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCF-xX-axs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807.2" y="878.41079460269873"/>
         </scene>
         <!--Calc Game View Controller-->
         <scene sceneID="DUV-DO-6Ii">
@@ -474,7 +519,7 @@
                     <viewLayoutGuide key="safeArea" id="MFY-OA-gYw"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="535" y="1773"/>
+            <point key="canvasLocation" x="868" y="-564"/>
         </scene>
         <!--Grid Game View Controller-->
         <scene sceneID="Ue9-pd-h9N">
@@ -748,7 +793,27 @@
                     <viewLayoutGuide key="safeArea" id="NZ4-v4-AMM"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1758" y="1639"/>
+            <point key="canvasLocation" x="1665" y="-564"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="fPa-KF-kjG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Aoh-lH-zvh" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qXR-hl-mLD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="4dy-kc-83A" kind="relationship" relationship="rootViewController" id="uka-hT-DME"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8Z-bn-Air" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="877.51124437781118"/>
         </scene>
     </scenes>
 </document>

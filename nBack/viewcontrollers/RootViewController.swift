@@ -12,6 +12,8 @@ import SVGKit
 import fluid_slider
 import CDAlertView
 import Surge
+//import RxCocoa
+//import RxSwift
 
 class RootViewController: UIViewController {
 
@@ -21,8 +23,13 @@ class RootViewController: UIViewController {
     @IBOutlet var nSlider: Slider!
     @IBOutlet var levellabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var hamburgerMenuButton: UIButton!
+    @IBAction func leftEdgePanned(_ sender: UIScreenEdgePanGestureRecognizer) {
+        self.performSegue(withIdentifier: "showSideMenuSegue", sender: nil)
+    }
     var levelN: Int = 1
     let userDefault = UserDefaults.standard
+    //let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +47,7 @@ class RootViewController: UIViewController {
         
         setupGameButtons()
         setupSlider()
+        setupHamburger()
         levellabel.text = NSLocalizedString("root_levelIndicator", comment: "")
     }
     
@@ -77,6 +85,15 @@ class RootViewController: UIViewController {
         } else if segue.identifier == "gridGameSegue" {
             let gridGameViewController: GridGameViewController = segue.destination as! GridGameViewController
             gridGameViewController.levelN = self.levelN
+        }
+    }
+    
+    private func setupHamburger() {
+        hamburgerMenuButton.backgroundColor = UIColor.clear
+        
+        if let svg = SVGKImage(named: "hamburger_icon.svg") {
+            svg.size = CGSize(width: 40, height: 40)
+            hamburgerMenuButton.setImage(svg.uiImage, for: .normal)
         }
     }
     

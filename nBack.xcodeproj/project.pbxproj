@@ -19,6 +19,7 @@
 		876B308521D2F37E00CC3BC7 /* ruby_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308221D2F37C00CC3BC7 /* ruby_icon.svg */; };
 		876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308321D2F37C00CC3BC7 /* gear_icon.svg */; };
 		876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */; };
+		876B308F21D3D1E500CC3BC7 /* hamburger_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
 		87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD9221C49B1900956562 /* grid_icon.svg */; };
@@ -63,6 +64,7 @@
 		876B308221D2F37C00CC3BC7 /* ruby_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ruby_icon.svg; sourceTree = "<group>"; };
 		876B308321D2F37C00CC3BC7 /* gear_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gear_icon.svg; sourceTree = "<group>"; };
 		876B308421D2F37D00CC3BC7 /* gamepad_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gamepad_icon.svg; sourceTree = "<group>"; };
+		876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hamburger_icon.svg; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		87B4FD9221C49B1900956562 /* grid_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid_icon.svg; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				876B307B21D2EE4D00CC3BC7 /* poly_image.svg */,
 				876B308021D2F02C00CC3BC7 /* game_image.svg */,
 				876B307C21D2EE4E00CC3BC7 /* thinking_image.svg */,
+				876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */,
 				87F7B53D21D0D67F00AA18FF /* closeX_icon.svg */,
 				87B4FD8E21C40ADE00956562 /* calc_icon.svg */,
 				87B4FD9221C49B1900956562 /* grid_icon.svg */,
@@ -361,6 +364,7 @@
 				876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */,
 				87F7B52821CFE7A600AA18FF /* materialCountDown.json in Resources */,
 				87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */,
+				876B308F21D3D1E500CC3BC7 /* hamburger_icon.svg in Resources */,
 				87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */,
 				87F7B53E21D0D67F00AA18FF /* closeX_icon.svg in Resources */,
 				876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */,
@@ -412,6 +416,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Surge/Surge.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -438,6 +443,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Surge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
