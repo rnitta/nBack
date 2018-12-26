@@ -1,4 +1,5 @@
 PODS:
+  - BetterSegmentedControl (1.0.3)
   - CDAlertView (0.9.1)
   - CocoaLumberjack (3.4.2):
     - CocoaLumberjack/Default (= 3.4.2)
@@ -90,6 +91,7 @@ PODS:
     - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
+  - BetterSegmentedControl (~> 1.0)
   - CDAlertView
   - Crashlytics (~> 3.12.0)
   - Fabric (~> 1.9.0)
@@ -111,6 +113,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BetterSegmentedControl
     - CDAlertView
     - CocoaLumberjack
     - Crashlytics
@@ -142,6 +145,7 @@ SPEC REPOS:
     - SVGKit
 
 SPEC CHECKSUMS:
+  BetterSegmentedControl: 4e3bd0bd517b0f6077c9e17f5663a01cff48e2c5
   CDAlertView: 89450acbd8d882868f2fc4ec6d2b6f128710c779
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
@@ -172,6 +176,6 @@ SPEC CHECKSUMS:
   Surge: 1f0286bc5f0fe4283f3455479895bf85c7ef7760
   SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
 
-PODFILE CHECKSUM: 8a068b1a4fff04addd2a1f7d7a3e4ba5f08190b9
+PODFILE CHECKSUM: af77698700ad1209eb33c3493671dee3524ccf59
 
 COCOAPODS: 1.5.3

@@ -22,6 +22,7 @@
 		876B308F21D3D1E500CC3BC7 /* hamburger_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */; };
 		876B309521D3D55200CC3BC7 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */; };
 		876B309721D3D7F100CC3BC7 /* kujira.json in Resources */ = {isa = PBXBuildFile; fileRef = 876B309621D3D7F100CC3BC7 /* kujira.json */; };
+		876B309A21D3E89A00CC3BC7 /* RecordsInspectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */; };
 		87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD8E21C40ADE00956562 /* calc_icon.svg */; };
 		87B4FD9121C40D9100956562 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B4FD9021C40D9100956562 /* UIImage.swift */; };
 		87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 87B4FD9221C49B1900956562 /* grid_icon.svg */; };
@@ -69,6 +70,7 @@
 		876B308E21D3D1E500CC3BC7 /* hamburger_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = hamburger_icon.svg; sourceTree = "<group>"; };
 		876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		876B309621D3D7F100CC3BC7 /* kujira.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kujira.json; sourceTree = "<group>"; };
+		876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsInspectViewController.swift; sourceTree = "<group>"; };
 		87B4FD8E21C40ADE00956562 /* calc_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = calc_icon.svg; sourceTree = "<group>"; };
 		87B4FD9021C40D9100956562 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		87B4FD9221C49B1900956562 /* grid_icon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = grid_icon.svg; sourceTree = "<group>"; };
@@ -139,6 +141,15 @@
 				87578D9321CB320800F76F54 /* LaunchView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		876B309821D3E82A00CC3BC7 /* side */ = {
+			isa = PBXGroup;
+			children = (
+				876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */,
+				876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */,
+			);
+			path = side;
 			sourceTree = "<group>";
 		};
 		87B4FD8C21C40ACD00956562 /* assets */ = {
@@ -245,10 +256,10 @@
 		87BC509B21C3CFAB000B3134 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				876B309821D3E82A00CC3BC7 /* side */,
 				87B4FD9A21C5268C00956562 /* game */,
 				87BC506A21C32467000B3134 /* RootViewController.swift */,
 				87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */,
-				876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -408,6 +419,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-nBack/Pods-nBack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -435,6 +447,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BetterSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -524,6 +537,7 @@
 				87578D9421CB320800F76F54 /* LaunchView.swift in Sources */,
 				8724B4AB21D12B0C00724303 /* gridData.swift in Sources */,
 				8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */,
+				876B309A21D3E89A00CC3BC7 /* RecordsInspectViewController.swift in Sources */,
 				87F7B50721CE4A3D00AA18FF /* NPad.swift in Sources */,
 				87B4FD9621C4F8D300956562 /* UIButton.swift in Sources */,
 			);
