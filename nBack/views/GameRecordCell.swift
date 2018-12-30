@@ -24,7 +24,7 @@ class GameRecordCell: UITableViewCell {
         
         levelScrimView.layer.cornerRadius = levelScrimView.frame.width / 2.0
         levelScrimView.layer.borderColor = UIColor.Set.lightBase.cgColor
-        levelScrimView.layer.borderWidth = 4
+        levelScrimView.layer.borderWidth = 3
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -26,12 +26,14 @@ class RecordsInspectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        calcRecords = realm.objects(calcData.self)
-        gridRecords = realm.objects(gridData.self)
+        calcRecords = realm.objects(calcData.self).sorted(byKeyPath: "timeStamp", ascending: false)
+        gridRecords = realm.objects(gridData.self).sorted(byKeyPath: "timeStamp", ascending: false)
         recordListTableView.delegate = self
         recordListTableView.dataSource = self
         recordListTableView.register(UINib(nibName: "GameRecordCell", bundle: nil), forCellReuseIdentifier: "GameRecordCell")
-
+        recordListTableView.register(UINib(nibName: "GameRecordHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "GameRecordHeader")
+        recordListTableView.tableFooterView = UIView(frame: .zero)
+        
         setupSegmentView()
         setupCloseButton()
         
@@ -66,18 +68,18 @@ class RecordsInspectViewController: UIViewController {
 
 // テーブル系切り出す
 extension RecordsInspectViewController: UITableViewDelegate, UITableViewDataSource {
-    // ヘッダの高さ
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 40
-//    }
+     //ヘッダの高さ
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
     
-    // ヘッダ設定
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerNibName) {
-//            return headerView
-//        }
-//        return nil
-//    }
+     //ヘッダ設定
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "GameRecordHeader") {
+            return headerView
+        }
+        return nil
+    }
     
      //セルの数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

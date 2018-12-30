@@ -37,3 +37,8 @@
 "game_completion_level" = "Level: %d";
 "game_completion_timeElapsed" = "Time Elapsed: %.1f s";
 "game_completion_missCount" = "Miss Count: %d";
+
+"records_tableHeaderDate" = "Date";
+"records_tableHeaderLevel" = "Level";
+"records_tableHeaderTime" = "Time";
+"records_tableHeaderMiss" = "Miss";

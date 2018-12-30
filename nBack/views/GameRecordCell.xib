@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000.0s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-bb-HFq">
-                        <rect key="frame" x="161" y="15" width="70" height="14"/>
+                        <rect key="frame" x="171" y="15" width="70" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="70" id="UA6-oc-x0h"/>
                             <constraint firstAttribute="height" constant="14" id="Wty-Dk-dNC"/>
@@ -50,7 +50,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1K-qh-iKI">
-                        <rect key="frame" x="123" y="8" width="28" height="28"/>
+                        <rect key="frame" x="133" y="8" width="28" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueL-Li-VEd">
                                 <rect key="frame" x="9" y="7.5" width="10" height="13"/>
@@ -85,7 +85,7 @@
                     <constraint firstItem="WqG-dN-Gw1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="NyW-5Z-Kl3"/>
                     <constraint firstItem="WqG-dN-Gw1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q8v-xV-K3b"/>
                     <constraint firstItem="q5B-2x-W6f" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aQJ-99-5gf"/>
-                    <constraint firstItem="03i-sl-wxn" firstAttribute="leading" secondItem="1Ko-bb-HFq" secondAttribute="trailing" constant="10" id="fk3-Uf-dlK"/>
+                    <constraint firstItem="03i-sl-wxn" firstAttribute="leading" secondItem="1Ko-bb-HFq" secondAttribute="trailing" id="fk3-Uf-dlK"/>
                     <constraint firstItem="03i-sl-wxn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hIj-qh-4e0"/>
                     <constraint firstItem="O1K-qh-iKI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vv8-rZ-cqH"/>
                 </constraints>

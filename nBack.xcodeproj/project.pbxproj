@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870DA29121D93759009AF4F1 /* GameRecordHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29021D93759009AF4F1 /* GameRecordHeader.xib */; };
+		870DA29321D93B88009AF4F1 /* GameRecordHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DA29221D93B88009AF4F1 /* GameRecordHeader.swift */; };
 		8724B4A921D108A800724303 /* calcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4A821D108A800724303 /* calcData.swift */; };
 		8724B4AB21D12B0C00724303 /* gridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AA21D12B0C00724303 /* gridData.swift */; };
 		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		5A6CBAEC5DE9D1C2CCF863D0 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
+		870DA29021D93759009AF4F1 /* GameRecordHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRecordHeader.xib; sourceTree = "<group>"; };
+		870DA29221D93B88009AF4F1 /* GameRecordHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecordHeader.swift; sourceTree = "<group>"; };
 		8724B4A821D108A800724303 /* calcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcData.swift; sourceTree = "<group>"; };
 		8724B4AA21D12B0C00724303 /* gridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridData.swift; sourceTree = "<group>"; };
 		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			children = (
 				876B309B21D3F65000CC3BC7 /* GameRecordCell.swift */,
 				876B309C21D3F65000CC3BC7 /* GameRecordCell.xib */,
+				870DA29021D93759009AF4F1 /* GameRecordHeader.xib */,
+				870DA29221D93B88009AF4F1 /* GameRecordHeader.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				876B308121D2F02C00CC3BC7 /* game_image.svg in Resources */,
 				87B4FD9321C49B1900956562 /* grid_icon.svg in Resources */,
 				876B307F21D2EE4F00CC3BC7 /* thinking_image.svg in Resources */,
+				870DA29121D93759009AF4F1 /* GameRecordHeader.xib in Resources */,
 				87BC505521C3230E000B3134 /* Assets.xcassets in Resources */,
 				87B4FD8F21C40ADE00956562 /* calc_icon.svg in Resources */,
 				876B308521D2F37E00CC3BC7 /* ruby_icon.svg in Resources */,
@@ -541,6 +548,7 @@
 				87B4FD9121C40D9100956562 /* UIImage.swift in Sources */,
 				8724B4A921D108A800724303 /* calcData.swift in Sources */,
 				87BC50A221C3E225000B3134 /* UIColor.swift in Sources */,
+				870DA29321D93B88009AF4F1 /* GameRecordHeader.swift in Sources */,
 				876B30A021D3FA4C00CC3BC7 /* Date.swift in Sources */,
 				87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */,
 				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,

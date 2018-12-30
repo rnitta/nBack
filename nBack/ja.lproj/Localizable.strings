@@ -40,3 +40,8 @@
 "game_completion_level" = "レベル: %d";
 "game_completion_timeElapsed" = "経過時間: %.1f 秒";
 "game_completion_missCount" = "ミス数: %d";
+
+"records_tableHeaderDate" = "日付";
+"records_tableHeaderLevel" = "レベル";
+"records_tableHeaderTime" = "時間";
+"records_tableHeaderMiss" = "ミス数";

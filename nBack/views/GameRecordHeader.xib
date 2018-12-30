@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="GameRecordHeader" id="iN0-l3-epB" customClass="GameRecordHeader" customModule="nBack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyd-YZ-1Lu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdA-he-NTb">
+                    <rect key="frame" x="15" y="10" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="UxX-DV-aEV"/>
+                        <constraint firstAttribute="width" constant="90" id="uyd-DI-2Xp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="レベル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-ae-K0B">
+                    <rect key="frame" x="130" y="10" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WHR-rm-knr"/>
+                        <constraint firstAttribute="width" constant="60" id="chZ-v3-jVQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DP9-Td-Vg7">
+                    <rect key="frame" x="190" y="10" width="40" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="0tK-VX-oXQ"/>
+                        <constraint firstAttribute="height" constant="30" id="nJc-an-5Sp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ミス数" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dni-DY-rvX">
+                    <rect key="frame" x="240" y="10" width="50" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="OJZ-Ov-fbS"/>
+                        <constraint firstAttribute="height" constant="30" id="wch-fJ-uOx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eyd-YZ-1Lu" secondAttribute="bottom" id="8fE-en-e53"/>
+                <constraint firstItem="DP9-Td-Vg7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9MY-Cb-oVg"/>
+                <constraint firstItem="vdA-he-NTb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="9rj-Pj-hhS"/>
+                <constraint firstItem="Dni-DY-rvX" firstAttribute="leading" secondItem="DP9-Td-Vg7" secondAttribute="trailing" constant="10" id="EwJ-DM-xpc"/>
+                <constraint firstItem="eyd-YZ-1Lu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YKQ-Pr-339"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dni-DY-rvX" secondAttribute="trailing" constant="30" id="Zi6-Oc-oLl"/>
+                <constraint firstItem="wdZ-ae-K0B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vdA-he-NTb" secondAttribute="trailing" id="fpL-b9-7vX"/>
+                <constraint firstItem="wdZ-ae-K0B" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="neu-lf-jw5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eyd-YZ-1Lu" secondAttribute="trailing" id="rOz-Hu-72k"/>
+                <constraint firstItem="vdA-he-NTb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ra2-uL-uyp"/>
+                <constraint firstItem="DP9-Td-Vg7" firstAttribute="leading" secondItem="wdZ-ae-K0B" secondAttribute="trailing" id="tKk-7R-2nq"/>
+                <constraint firstItem="Dni-DY-rvX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wkJ-ER-JQa"/>
+                <constraint firstItem="eyd-YZ-1Lu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="x0r-Pf-3vx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="dateLabel" destination="vdA-he-NTb" id="XIr-7x-lvP"/>
+                <outlet property="levelLabel" destination="wdZ-ae-K0B" id="9hD-Tx-hlH"/>
+                <outlet property="missLabel" destination="Dni-DY-rvX" id="L66-YD-1L8"/>
+                <outlet property="timeLabel" destination="DP9-Td-Vg7" id="XUY-Cf-1oz"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="-134.03298350824588"/>
+        </view>
+    </objects>
+</document>
