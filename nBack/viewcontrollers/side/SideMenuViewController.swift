@@ -14,6 +14,9 @@ class SideMenuViewController: UIViewController {
     
     
     @IBOutlet var vainAnimationView: LOTAnimationView!
+    @IBAction func tutorialButtonTapped(_ sender: UIButton) {
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

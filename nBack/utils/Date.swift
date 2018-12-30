@@ -15,4 +15,11 @@ extension Date {
         dateFormater.dateFormat = "yyyy/MM/dd HH:mm"
         return dateFormater.string(from: self)
     }
+    func toString(_ dateFormat: String) -> String {
+        let dateFormater = DateFormatter()
+        dateFormater.timeZone = TimeZone.current
+        dateFormater.locale = Locale.current
+        dateFormater.dateFormat = dateFormat
+        return dateFormater.string(from: self)
+    }
 }

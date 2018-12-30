@@ -91,10 +91,10 @@ extension RecordsInspectViewController: UITableViewDelegate, UITableViewDataSour
     // 各セルのテキスト
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameRecordCell")! as! GameRecordCell
+        let dateFormat = "MM/dd HH:mm"
         if segmentIndex == 0 {
             let record = calcRecords[indexPath.item]
-            cell.dateLabel.text = record.timeStamp.toYMDHM()
-            cell.levelScrimView.layer.cornerRadius = cell.levelScrimView.frame.width / 2.0
+            cell.dateLabel.text = record.timeStamp.toString(dateFormat)
             cell.levelLabel.text = String(format: "%d", record.level)
             cell.elapsedTimeLabel.text = String(format: "%.1fs", record.elapsedTime)
             cell.missCountLabel.text = String(format: "%d", record.miss)
@@ -110,8 +110,7 @@ extension RecordsInspectViewController: UITableViewDelegate, UITableViewDataSour
             
         } else {
             let record = gridRecords[indexPath.item]
-            cell.dateLabel.text = record.timeStamp.toYMDHM()
-            cell.levelScrimView.layer.cornerRadius = cell.levelScrimView.frame.width / 2.0
+            cell.dateLabel.text = record.timeStamp.toString(dateFormat)
             cell.levelLabel.text = String(format: "%d", record.level)
             cell.elapsedTimeLabel.text = String(format: "%.1fs", record.elapsedTime)
             cell.missCountLabel.text = String(format: "%d", record.miss)
