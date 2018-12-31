@@ -24,3 +24,9 @@ class calcData: Object {
         return ["timeStamp"]
     }
 }
+
+extension Results where Element == calcData {
+    func toHeatmapJson() -> [String: Int] {
+        return self.reduce(into: [String: Int]()) { $0[String(format: "%d", Int($1.timeStamp.timeIntervalSince1970))] = 1 }
+    }    
+}

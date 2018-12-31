@@ -23,3 +23,15 @@ class gridData: Object {
         return ["timeStamp"]
     }
 }
+
+extension Results where Element == gridData {
+    func toHeatmapJson() -> [String: Int] {
+        return self.reduce(into: [String: Int]()) { $0[String(format: "%d", Int($1.timeStamp.timeIntervalSince1970))] = 1 }
+    }    
+}
+
+extension Results {
+    func perfect() -> Results<Element> {
+        return self.filter("miss == %d", 0)
+    }
+}

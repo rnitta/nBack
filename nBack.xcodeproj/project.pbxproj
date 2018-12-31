@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		870DA29121D93759009AF4F1 /* GameRecordHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29021D93759009AF4F1 /* GameRecordHeader.xib */; };
 		870DA29321D93B88009AF4F1 /* GameRecordHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DA29221D93B88009AF4F1 /* GameRecordHeader.swift */; };
+		870DA29621D9E727009AF4F1 /* HeatmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DA29521D9E727009AF4F1 /* HeatmapViewController.swift */; };
+		870DA29821D9E7FA009AF4F1 /* closeButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DA29721D9E7FA009AF4F1 /* closeButtonProtocol.swift */; };
+		870DA29A21D9EB15009AF4F1 /* heatmap.html in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29921D9EB15009AF4F1 /* heatmap.html */; };
+		870DA29D21D9EB36009AF4F1 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29B21D9EB36009AF4F1 /* d3.min.js */; };
+		870DA29E21D9EB36009AF4F1 /* cal-heatmap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29C21D9EB36009AF4F1 /* cal-heatmap.min.js */; };
+		870DA2A021D9EB9A009AF4F1 /* cal-heatmap.css in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29F21D9EB9A009AF4F1 /* cal-heatmap.css */; };
 		8724B4A921D108A800724303 /* calcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4A821D108A800724303 /* calcData.swift */; };
 		8724B4AB21D12B0C00724303 /* gridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AA21D12B0C00724303 /* gridData.swift */; };
 		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
@@ -39,7 +45,7 @@
 		87BC505521C3230E000B3134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505421C3230E000B3134 /* Assets.xcassets */; };
 		87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BC505621C3230E000B3134 /* LaunchScreen.storyboard */; };
 		87BC506621C323B0000B3134 /* three.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506121C323AF000B3134 /* three.min.js */; };
-		87BC506721C323B0000B3134 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506321C323AF000B3134 /* index.js */; };
+		87BC506721C323B0000B3134 /* poly.js in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506321C323AF000B3134 /* poly.js */; };
 		87BC506921C323B0000B3134 /* poly.html in Resources */ = {isa = PBXBuildFile; fileRef = 87BC506521C323B0000B3134 /* poly.html */; };
 		87BC506B21C32467000B3134 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC506A21C32467000B3134 /* RootViewController.swift */; };
 		87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */; };
@@ -62,6 +68,12 @@
 		5A6CBAEC5DE9D1C2CCF863D0 /* Pods-nBack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nBack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nBack/Pods-nBack.debug.xcconfig"; sourceTree = "<group>"; };
 		870DA29021D93759009AF4F1 /* GameRecordHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRecordHeader.xib; sourceTree = "<group>"; };
 		870DA29221D93B88009AF4F1 /* GameRecordHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecordHeader.swift; sourceTree = "<group>"; };
+		870DA29521D9E727009AF4F1 /* HeatmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapViewController.swift; sourceTree = "<group>"; };
+		870DA29721D9E7FA009AF4F1 /* closeButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closeButtonProtocol.swift; sourceTree = "<group>"; };
+		870DA29921D9EB15009AF4F1 /* heatmap.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = heatmap.html; sourceTree = "<group>"; };
+		870DA29B21D9EB36009AF4F1 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
+		870DA29C21D9EB36009AF4F1 /* cal-heatmap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "cal-heatmap.min.js"; sourceTree = "<group>"; };
+		870DA29F21D9EB9A009AF4F1 /* cal-heatmap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "cal-heatmap.css"; sourceTree = "<group>"; };
 		8724B4A821D108A800724303 /* calcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcData.swift; sourceTree = "<group>"; };
 		8724B4AA21D12B0C00724303 /* gridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridData.swift; sourceTree = "<group>"; };
 		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
@@ -94,7 +106,7 @@
 		87BC505721C3230E000B3134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87BC505921C3230E000B3134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87BC506121C323AF000B3134 /* three.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = three.min.js; sourceTree = "<group>"; };
-		87BC506321C323AF000B3134 /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		87BC506321C323AF000B3134 /* poly.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = poly.js; sourceTree = "<group>"; };
 		87BC506521C323B0000B3134 /* poly.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = poly.html; sourceTree = "<group>"; };
 		87BC506A21C32467000B3134 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		87BC509E21C3D2BA000B3134 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +173,7 @@
 			children = (
 				876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */,
 				876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */,
+				870DA29521D9E727009AF4F1 /* HeatmapViewController.swift */,
 			);
 			path = side;
 			sourceTree = "<group>";
@@ -245,8 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				87BC506021C323AF000B3134 /* lib */,
-				87BC506521C323B0000B3134 /* poly.html */,
 				87BC506221C323AF000B3134 /* src */,
+				870DA29921D9EB15009AF4F1 /* heatmap.html */,
+				87BC506521C323B0000B3134 /* poly.html */,
 			);
 			path = html;
 			sourceTree = "<group>";
@@ -254,6 +268,8 @@
 		87BC506021C323AF000B3134 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				870DA29C21D9EB36009AF4F1 /* cal-heatmap.min.js */,
+				870DA29B21D9EB36009AF4F1 /* d3.min.js */,
 				87BC506121C323AF000B3134 /* three.min.js */,
 			);
 			path = lib;
@@ -262,7 +278,8 @@
 		87BC506221C323AF000B3134 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				87BC506321C323AF000B3134 /* index.js */,
+				870DA29F21D9EB9A009AF4F1 /* cal-heatmap.css */,
+				87BC506321C323AF000B3134 /* poly.js */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -289,6 +306,7 @@
 				8724B4AE21D1A4DD00724303 /* Constraint.swift */,
 				875182B621D1EAE700D2C349 /* TotalExp.swift */,
 				876B309F21D3FA4C00CC3BC7 /* Date.swift */,
+				870DA29721D9E7FA009AF4F1 /* closeButtonProtocol.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -396,16 +414,20 @@
 				876B309E21D3F65000CC3BC7 /* GameRecordCell.xib in Resources */,
 				876B308621D2F37E00CC3BC7 /* gear_icon.svg in Resources */,
 				87F7B52821CFE7A600AA18FF /* materialCountDown.json in Resources */,
+				870DA29A21D9EB15009AF4F1 /* heatmap.html in Resources */,
 				87F7B52121CFA4E200AA18FF /* Localizable.strings in Resources */,
 				876B308F21D3D1E500CC3BC7 /* hamburger_icon.svg in Resources */,
 				87F7B51E21CFA4D500AA18FF /* Localizable.strings in Resources */,
+				870DA2A021D9EB9A009AF4F1 /* cal-heatmap.css in Resources */,
 				87F7B53E21D0D67F00AA18FF /* closeX_icon.svg in Resources */,
 				876B308721D2F37E00CC3BC7 /* gamepad_icon.svg in Resources */,
-				87BC506721C323B0000B3134 /* index.js in Resources */,
+				87BC506721C323B0000B3134 /* poly.js in Resources */,
 				87F7B53021CFFB0000AA18FF /* dottedLoading.json in Resources */,
 				876B30A221D3FC8900CC3BC7 /* check_icon.svg in Resources */,
+				870DA29E21D9EB36009AF4F1 /* cal-heatmap.min.js in Resources */,
 				87BC505821C3230E000B3134 /* LaunchScreen.storyboard in Resources */,
 				87BC506921C323B0000B3134 /* poly.html in Resources */,
+				870DA29D21D9EB36009AF4F1 /* d3.min.js in Resources */,
 				87F7B53C21D0B31300AA18FF /* clap.json in Resources */,
 				876B309721D3D7F100CC3BC7 /* kujira.json in Resources */,
 				87BC506621C323B0000B3134 /* three.min.js in Resources */,
@@ -546,6 +568,8 @@
 				87B4FD9C21C526BE00956562 /* CalcGameViewController.swift in Sources */,
 				8724B4AF21D1A4DD00724303 /* Constraint.swift in Sources */,
 				87B4FD9121C40D9100956562 /* UIImage.swift in Sources */,
+				870DA29621D9E727009AF4F1 /* HeatmapViewController.swift in Sources */,
+				870DA29821D9E7FA009AF4F1 /* closeButtonProtocol.swift in Sources */,
 				8724B4A921D108A800724303 /* calcData.swift in Sources */,
 				87BC50A221C3E225000B3134 /* UIColor.swift in Sources */,
 				870DA29321D93B88009AF4F1 /* GameRecordHeader.swift in Sources */,

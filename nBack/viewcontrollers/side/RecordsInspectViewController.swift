@@ -41,7 +41,7 @@ class RecordsInspectViewController: UIViewController {
     
     private func setupCloseButton() {
         closeButton.backgroundColor = UIColor.clear
-        
+        ;
         // SVGKImage?.uiImageで事足りるかも
         if let svg = SVGKImage(named: "closeX_icon.svg") {
             closeButton.setImage(svg.uiImage, for: .normal)
