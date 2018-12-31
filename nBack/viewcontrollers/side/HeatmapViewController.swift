@@ -44,7 +44,7 @@ class HeatmapViewController: UIViewController {
     }
     
     private func setupSegmentView() {
-        segmentView.segments = LabelSegment.segments(withTitles: ["All", "Perfect"],
+        segmentView.segments = LabelSegment.segments(withTitles: [NSLocalizedString("heatmap_segmentFirst", comment: ""), NSLocalizedString("heatmap_segmentSecond", comment: "")],
                                                      normalFont: UIFont(name: "HiraginoSans-W3", size: 20)!,
                                                      selectedFont: UIFont(name: "HiraginoSans-W6", size: 20)!)
     }
@@ -82,13 +82,14 @@ extension HeatmapViewController: WKNavigationDelegate {
     private func execJSString() -> String {
         var calcdata:[String: Int] = [:]
         var griddata:[String: Int] = [:]
+        print(Date().beginningOfThisMonth())
         
         if segmentIndex == 0 {
-            calcdata = realm.objects(calcData.self).toHeatmapJson()
-            griddata = realm.objects(gridData.self).toHeatmapJson()
+            calcdata = realm.objects(calcData.self).filter("timeStamp >= %@", Date().beginningOfThisMonth()).toHeatmapJson()
+            griddata = realm.objects(gridData.self).filter("timeStamp >= %@", Date().beginningOfThisMonth()).toHeatmapJson()
         } else {
-            calcdata = realm.objects(calcData.self).perfect().toHeatmapJson()
-            griddata = realm.objects(gridData.self).perfect().toHeatmapJson()
+            calcdata = realm.objects(calcData.self).filter("timeStamp >= %@", Date().beginningOfThisMonth()).perfect().toHeatmapJson()
+            griddata = realm.objects(gridData.self).filter("timeStamp >= %@", Date().beginningOfThisMonth()).perfect().toHeatmapJson()
         }
         let dataString:String = calcdata.merging(griddata, uniquingKeysWith: +).description
         let clipped:String = String(dataString[dataString.index(after: dataString.startIndex)..<dataString.index(before: dataString.endIndex)])

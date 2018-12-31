@@ -45,3 +45,6 @@
 "records_tableHeaderLevel" = "レベル";
 "records_tableHeaderTime" = "時間";
 "records_tableHeaderMiss" = "ミス数";
+
+"heatmap_segmentFirst" = "全て";
+"heatmap_segmentSecond" = "ノーミス";

@@ -22,4 +22,14 @@ extension Date {
         dateFormater.dateFormat = dateFormat
         return dateFormater.string(from: self)
     }
+    
+    func beginningOfThisMonth() -> Date {
+        let calendar = Calendar.current
+        let startOfDay = calendar.startOfDay(for: self)
+        let dayInt = calendar.component(.day, from: self)
+        let comps = DateComponents(day: 1 - dayInt, hour: 0)
+        let startOfMonth = calendar.date(byAdding: comps, to: startOfDay)!
+        print(startOfMonth)
+        return startOfMonth
+    }
 }

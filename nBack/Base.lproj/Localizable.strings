@@ -42,3 +42,6 @@
 "records_tableHeaderLevel" = "Level";
 "records_tableHeaderTime" = "Time";
 "records_tableHeaderMiss" = "Miss";
+
+"heatmap_segmentFirst" = "All";
+"heatmap_segmentSecond" = "Perfect";
