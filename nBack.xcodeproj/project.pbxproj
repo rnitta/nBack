@@ -15,6 +15,7 @@
 		870DA29D21D9EB36009AF4F1 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29B21D9EB36009AF4F1 /* d3.min.js */; };
 		870DA29E21D9EB36009AF4F1 /* cal-heatmap.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29C21D9EB36009AF4F1 /* cal-heatmap.min.js */; };
 		870DA2A021D9EB9A009AF4F1 /* cal-heatmap.css in Resources */ = {isa = PBXBuildFile; fileRef = 870DA29F21D9EB9A009AF4F1 /* cal-heatmap.css */; };
+		870DA2A221DCED73009AF4F1 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870DA2A121DCED73009AF4F1 /* NotificationViewController.swift */; };
 		8724B4A921D108A800724303 /* calcData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4A821D108A800724303 /* calcData.swift */; };
 		8724B4AB21D12B0C00724303 /* gridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AA21D12B0C00724303 /* gridData.swift */; };
 		8724B4AD21D14FCA00724303 /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8724B4AC21D14FCA00724303 /* GameStatus.swift */; };
@@ -74,6 +75,7 @@
 		870DA29B21D9EB36009AF4F1 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
 		870DA29C21D9EB36009AF4F1 /* cal-heatmap.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "cal-heatmap.min.js"; sourceTree = "<group>"; };
 		870DA29F21D9EB9A009AF4F1 /* cal-heatmap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "cal-heatmap.css"; sourceTree = "<group>"; };
+		870DA2A121DCED73009AF4F1 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		8724B4A821D108A800724303 /* calcData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcData.swift; sourceTree = "<group>"; };
 		8724B4AA21D12B0C00724303 /* gridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridData.swift; sourceTree = "<group>"; };
 		8724B4AC21D14FCA00724303 /* GameStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				876B309421D3D55200CC3BC7 /* SideMenuViewController.swift */,
 				876B309921D3E89A00CC3BC7 /* RecordsInspectViewController.swift */,
 				870DA29521D9E727009AF4F1 /* HeatmapViewController.swift */,
+				870DA2A121DCED73009AF4F1 /* NotificationViewController.swift */,
 			);
 			path = side;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				870DA29321D93B88009AF4F1 /* GameRecordHeader.swift in Sources */,
 				876B30A021D3FA4C00CC3BC7 /* Date.swift in Sources */,
 				87BC509F21C3D2BA000B3134 /* TutorialViewController.swift in Sources */,
+				870DA2A221DCED73009AF4F1 /* NotificationViewController.swift in Sources */,
 				87BC506B21C32467000B3134 /* RootViewController.swift in Sources */,
 				875182B721D1EAE700D2C349 /* TotalExp.swift in Sources */,
 				87B4FD9E21C526D400956562 /* GridGameViewController.swift in Sources */,

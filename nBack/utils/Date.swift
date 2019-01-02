@@ -29,7 +29,6 @@ extension Date {
         let dayInt = calendar.component(.day, from: self)
         let comps = DateComponents(day: 1 - dayInt, hour: 0)
         let startOfMonth = calendar.date(byAdding: comps, to: startOfDay)!
-        print(startOfMonth)
         return startOfMonth
     }
 }

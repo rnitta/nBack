@@ -48,3 +48,10 @@
 
 "heatmap_segmentFirst" = "全て";
 "heatmap_segmentSecond" = "ノーミス";
+
+"notification_describeLabel" = "「ローマは一日にして成らず」\n\n「継続は力なり」\n\n下のボタンをオンにして、毎日午前9時に\n\nリマインダーを受け取りましょう。";
+
+"localNotificationBodyKey1" = "今日もワーキングメモリを鍛えましょう！";
+"localNotificationBodyKey2" = "脳トレの時間です！";
+"localNotificationBodyKey3" = "ローマは一日にして成らず！";
+"localNotificationBodyKey4" = "継続は力なり！";

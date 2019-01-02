@@ -254,7 +254,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="top" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-SC-OPK">
-                                <rect key="frame" x="0.0" y="201" width="300" height="100"/>
+                                <rect key="frame" x="0.0" y="201" width="300" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjO-QG-u9k">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -298,6 +298,29 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="baq-6G-W0g" kind="popoverPresentation" popoverAnchorView="i0m-u3-SWp" id="Zw5-Km-Yg5">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnH-FZ-00R">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eoz-EQ-r82"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="NOTIFICATION"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dividerColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isDividerHidden" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="dividerThickness">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="LuH-oa-C69" kind="popoverPresentation" popoverAnchorView="lnH-FZ-00R" id="iRs-kC-fiY">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
                                         </connections>
@@ -430,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6T-Bk-ubx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2074" y="878"/>
+            <point key="canvasLocation" x="868" y="1568"/>
         </scene>
         <!--Heatmap View Controller-->
         <scene sceneID="rjK-eH-hez">
@@ -499,7 +522,7 @@
                                         <rect key="frame" x="0.0" y="70" width="375" height="577"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO">
-                                            <dataDetectorTypes key="dataDetectorTypes"/>
+                                            <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                             <wkPreferences key="preferences"/>
                                         </wkWebViewConfiguration>
@@ -524,7 +547,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZu-2f-dBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="878"/>
+            <point key="canvasLocation" x="1516" y="1567"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="JOj-dn-NtD">
+            <objects>
+                <viewController id="LuH-oa-C69" customClass="NotificationViewController" customModule="nBack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYf-hx-wuT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZU3-yP-Oyi">
+                                <rect key="frame" x="49" y="70" width="277" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Jy9-jy-7sO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="ezC-c5-dE8"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Rome was not built in a day.Continuity is the father of success.Turn on the button below</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="and enable daily notification at 9:00 am.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.2627450980392157" green="0.2627450980392157" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="14" name="HiraginoSans-W3"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFQ-1c-x5Y" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
+                                <rect key="frame" x="112.5" y="320" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.27371412519999999" green="0.60021603109999999" blue="0.57647162679999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="O5Q-VP-kKW"/>
+                                    <constraint firstAttribute="height" constant="50" id="xra-0h-pmn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="bouncesOnChange" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="announcesValueImmediately" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorViewInset">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="indicatorViewBorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorViewBackgroundColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="segmentIndexChanged:" destination="baq-6G-W0g" eventType="valueChanged" id="tXq-qz-MAn"/>
+                                    <action selector="segmentValueChanged:" destination="hZy-ZT-PKw" eventType="valueChanged" id="Sdq-KD-Vwz"/>
+                                    <action selector="toggleValueChanged:" destination="LuH-oa-C69" eventType="valueChanged" id="8a5-0Z-vcy"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8U9-mS-fyy">
+                                <rect key="frame" x="325" y="30" width="40" height="40"/>
+                                <color key="backgroundColor" name="systemPinkColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="HX7-HT-SCX"/>
+                                    <constraint firstAttribute="height" constant="40" id="KaB-di-sHr"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="7Um-NN-UOQ" eventType="touchUpInside" id="lai-Dl-H7v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93695038559999999" green="0.93007671830000005" blue="0.88234686849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8U9-mS-fyy" firstAttribute="top" secondItem="ay6-Y8-2gy" secondAttribute="top" constant="10" id="GVt-75-YEI"/>
+                            <constraint firstItem="ZU3-yP-Oyi" firstAttribute="centerX" secondItem="AYf-hx-wuT" secondAttribute="centerX" id="QuJ-La-zQ8"/>
+                            <constraint firstItem="ZU3-yP-Oyi" firstAttribute="top" secondItem="ay6-Y8-2gy" secondAttribute="top" constant="50" id="dwV-rK-Y37"/>
+                            <constraint firstItem="ay6-Y8-2gy" firstAttribute="trailing" secondItem="8U9-mS-fyy" secondAttribute="trailing" constant="10" id="e9z-Xe-imT"/>
+                            <constraint firstItem="sFQ-1c-x5Y" firstAttribute="centerX" secondItem="AYf-hx-wuT" secondAttribute="centerX" id="eB6-WX-qyf"/>
+                            <constraint firstItem="sFQ-1c-x5Y" firstAttribute="top" secondItem="ZU3-yP-Oyi" secondAttribute="bottom" constant="50" id="fEQ-TJ-MO4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ay6-Y8-2gy"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="8U9-mS-fyy" id="6fM-b5-LMj"/>
+                        <outlet property="describeLabel" destination="ZU3-yP-Oyi" id="Fi0-Ld-R24"/>
+                        <outlet property="onOffToggle" destination="sFQ-1c-x5Y" id="3a6-Oy-uCl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qi3-b8-AJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2231" y="1567"/>
         </scene>
         <!--Calc Game View Controller-->
         <scene sceneID="DUV-DO-6Ii">

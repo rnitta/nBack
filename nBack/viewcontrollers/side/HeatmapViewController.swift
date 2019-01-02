@@ -82,7 +82,6 @@ extension HeatmapViewController: WKNavigationDelegate {
     private func execJSString() -> String {
         var calcdata:[String: Int] = [:]
         var griddata:[String: Int] = [:]
-        print(Date().beginningOfThisMonth())
         
         if segmentIndex == 0 {
             calcdata = realm.objects(calcData.self).filter("timeStamp >= %@", Date().beginningOfThisMonth()).toHeatmapJson()
@@ -92,7 +91,8 @@ extension HeatmapViewController: WKNavigationDelegate {
             griddata = realm.objects(gridData.self).filter("timeStamp >= %@", Date().beginningOfThisMonth()).perfect().toHeatmapJson()
         }
         let dataString:String = calcdata.merging(griddata, uniquingKeysWith: +).description
-        let clipped:String = String(dataString[dataString.index(after: dataString.startIndex)..<dataString.index(before: dataString.endIndex)])
+        var clipped:String = String(dataString[dataString.index(after: dataString.startIndex)..<dataString.index(before: dataString.endIndex)])
+        if clipped == ":" { clipped = "" } //空対策
         //FIXME:jsでメソッド定義して呼ぶようにする
         return String(format: """
         document.getElementById('recordsCountText').innerText = "";

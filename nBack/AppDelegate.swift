@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import UserNotifications
+import NotificationCenter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -44,8 +46,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        let userDefault = UserDefaults()
+        let udnotificationKey: String = "isDailyLocalNotificationEnabled"
+        if userDefault.bool(forKey: udnotificationKey) {
+            //ローカル通知
+            let trigger: UNNotificationTrigger
+            let content = UNMutableNotificationContent()
+            var notificationTime = DateComponents()
+            
+            notificationTime.hour = 9
+            notificationTime.minute = 00
+            trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: true)
+            
+            content.title = "nBackTrainer"
+            let localNotificationBodyKey = String(format: "localNotificationBodyKey%d", Int.random(in: 1...4))
+            content.body = NSLocalizedString(localNotificationBodyKey, comment: "")
+            content.sound = UNNotificationSound.default
+            
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        } else {
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        }
+
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
