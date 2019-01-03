@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests() //一旦全削除
         let userDefault = UserDefaults()
         let udnotificationKey: String = "isDailyLocalNotificationEnabled"
         if userDefault.bool(forKey: udnotificationKey) {
@@ -65,8 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        } else {
-            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         }
 
     }

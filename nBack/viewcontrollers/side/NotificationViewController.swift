@@ -65,6 +65,13 @@ class NotificationViewController: UIViewController, UNUserNotificationCenterDele
                 if error != nil { return }
                 if granted {
                     center.delegate = self //いる？
+                } else {
+                    if let url = URL(string:"App-Prefs:root=NOTIFICATIONS_ID&path=jp.amagrammer.nBackTrainer") {
+                        UIApplication.shared.open(url, options: [:], completionHandler: { _ in
+                            self.userDefault.set(false, forKey: self.udnotificationKey)
+                            self.onOffToggle.setIndex(1)
+                        })
+                    }
                 }
             })
         
