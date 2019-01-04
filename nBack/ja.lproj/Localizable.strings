@@ -50,6 +50,8 @@
 "heatmap_segmentSecond" = "ノーミス";
 
 "notification_describeLabel" = "「ローマは一日にして成らず」\n\n「継続は力なり」\n\n下のボタンをオンにして、毎日午前9時に\n\nリマインダーを受け取りましょう。";
+"notification_pushAlertTitle" = "通知が無効になっています";
+"notification_pushAlertMessage" = "リマインダーを受け取るには設定より\nnBackTrainerからの通知を許可してください";
 
 "localNotificationBodyKey1" = "今日もワーキングメモリを鍛えましょう！";
 "localNotificationBodyKey2" = "脳トレの時間です！";

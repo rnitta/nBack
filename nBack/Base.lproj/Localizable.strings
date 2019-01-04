@@ -47,6 +47,9 @@
 "heatmap_segmentSecond" = "Perfect";
 
 "notification_describeLabel" = "Rome was not built in a day.\n\nContinuity is the father of success.\n\nTurn on the button below\n\nand enable daily reminder at 9:00 am.";
+"notification_pushAlertTitle" = "Notification Disabled";
+"notification_pushAlertMessage" = "To receive reminder,\nnotification by nBackTrainer must be enabled.\nPlease permit notifications.";
+
 
 "localNotificationBodyKey1" = "It's time to train your brain!";
 "localNotificationBodyKey2" = "Continuity is the father of success.";

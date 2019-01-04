@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import BetterSegmentedControl
 import UserNotifications
+import CDAlertView
 
 class NotificationViewController: UIViewController, UNUserNotificationCenterDelegate {
 
@@ -66,12 +67,18 @@ class NotificationViewController: UIViewController, UNUserNotificationCenterDele
                 if granted {
                     center.delegate = self //いる？
                 } else {
-                    if let url = URL(string:"App-Prefs:root=NOTIFICATIONS_ID&path=jp.amagrammer.nBackTrainer") {
-                        UIApplication.shared.open(url, options: [:], completionHandler: { _ in
-                            self.userDefault.set(false, forKey: self.udnotificationKey)
-                            self.onOffToggle.setIndex(1)
-                        })
-                    }
+                    let alert: UIAlertController = UIAlertController(title: NSLocalizedString("notification_pushAlertTitle", comment: ""), message: NSLocalizedString("notification_pushAlertMessage", comment: ""), preferredStyle:  UIAlertController.Style.alert)
+                    let defaultAction: UIAlertAction = UIAlertAction(title: "OK🤔", style: UIAlertAction.Style.default, handler:{ (action: UIAlertAction!) -> Void in
+                        self.userDefault.set(false, forKey: self.udnotificationKey)
+                        self.onOffToggle.setIndex(1)
+                        DispatchQueue.main.async {
+                            if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        }
+                    })
+                    alert.addAction(defaultAction)
+                    self.present(alert, animated: true, completion: nil)
                 }
             })
         
